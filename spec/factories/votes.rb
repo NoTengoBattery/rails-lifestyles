@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :vote do
-    ArticleId { 1 }
-    UserId { 1 }
+    ArticleId { nil }
+    UserId { nil }
   end
 end
