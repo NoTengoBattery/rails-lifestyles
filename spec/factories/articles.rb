@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :article do
-    AuthorId { nil }
+    AuthorId { Faker::Number.number }
     Title { Faker::Lorem.sentence }
     Text { Faker::Lorem.paragraph }
     Image { Faker::Internet.url }
