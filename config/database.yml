@@ -87,6 +87,6 @@ test:
 #
 production:
   <<: *default
-  database: website_template_production
-  username: website_template
-  password: <%= ENV['WEBSITE_TEMPLATE_DATABASE_PASSWORD'] %>
+  database: no_tengo_lifestyle
+  username: rails
+  password: <%= ENV['NO_TENGO_LIFESTYLE_DATABASE_PASSWORD'] %>
