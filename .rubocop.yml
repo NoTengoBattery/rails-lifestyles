@@ -1,0 +1,32 @@
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
+require:
+  - rubocop-faker
+  - rubocop-i18n
+  - rubocop-rails
+  - rubocop-rake
+  - rubocop-rspec
+AllCops:
+  Exclude:
+    - ".bundle/**/*"
+    - "node_modules/**/*"
+    - "public/packs*/**/*"
+    - "tmp/**/*"
+    - "vendor/bundle/**/*"
+  DisplayCopNames:                true
+  NewCops:                        enable
+  TargetRubyVersion:              3.0
+
+Layout/LineLength:
+  Max:                            120
+  Exclude:
+  - "bin/bundle"
+  - "config/initializers/devise.rb"
+Style/FrozenStringLiteralComment:
+  EnforcedStyle:                  never
+
+I18n/RailsI18n:
+  Enabled:                        true
+I18n/GetText:
+  Enabled:                        false

@@ -1,0 +1,19 @@
+{
+  "name": "website-template",
+  "private": true,
+  "dependencies": {
+    "@csstools/normalize.css": "^11.0",
+    "@rails/actioncable": "^6.1",
+    "@rails/activestorage": "^6.1",
+    "@rails/ujs": "^6.1",
+    "@rails/webpacker": "^5.2",
+    "sass": "^1.32",
+    "turbolinks": "^5.2"
+  },
+  "version": "v0.25",
+  "devDependencies": {
+    "stylelint": "^13.12",
+    "stylelint-config-sass-guidelines": "^8.0",
+    "webpack-dev-server": "^3.11"
+  }
+}
