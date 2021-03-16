@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_193153) do
+ActiveRecord::Schema.define(version: 2021_03_16_194848) do
 
   create_table "articles", force: :cascade do |t|
     t.integer "AuthorId", null: false
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 2021_03_16_193153) do
     t.index ["CategoryId"], name: "index_articles_on_CategoryId"
     t.index ["CreatedAt"], name: "index_articles_on_CreatedAt"
     t.index ["Title"], name: "index_articles_on_Title", unique: true
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "Name", null: false
+    t.integer "Priority", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["Name"], name: "index_categories_on_Name", unique: true
+    t.index ["Priority"], name: "index_categories_on_Priority", unique: true
   end
 
   create_table "users", force: :cascade do |t|
