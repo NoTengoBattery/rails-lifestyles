@@ -4,7 +4,6 @@ RSpec.describe Article, type: :model do
   context "validations" do
     subject { FactoryBot.build(:article) }
     it { should validate_presence_of(:AuthorId) }
-    it { should validate_presence_of(:CategoryId) }
     it { should validate_presence_of(:Title) }
     it { should validate_uniqueness_of(:Title) }
     it { should validate_presence_of(:Text) }
