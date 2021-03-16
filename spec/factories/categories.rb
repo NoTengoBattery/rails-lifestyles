@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :category do
     Name { Faker::Lorem.word }
-    Priority { Faker::Number.within(range: 1..9999) }
+    Priority { Faker::Number.number }
   end
 end
