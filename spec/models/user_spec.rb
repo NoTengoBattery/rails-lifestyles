@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     subject { FactoryBot.build(:user) }
     it { should validate_presence_of(:Name) }
     it { should validate_uniqueness_of(:Name) }
-    it { should validate_length_of(:Name).is_at_least(6) }
+    it { should validate_length_of(:Name).is_at_least(6).is_at_most(50) }
   end
   context "associations" do
     subject { FactoryBot.build(:user) }
