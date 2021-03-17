@@ -1,6 +1,6 @@
 name:                     Tests
 
-on:                       [push, pull_request, release]
+on:                       [pull_request, release]
 
 env:
   FORCE_COLOR:            1
