@@ -21,7 +21,7 @@ gem "jbuilder", "~> 2.11", ">= 2.11.2"
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.12', '>= 1.12.1'
 
-# Extra gems for production
+# Extra gems required for this project
 gem "devise", "~> 4.7", ">= 4.7.3"
 gem "devise-i18n", "~> 1.9", ">= 1.9.2"
 gem "mina", "~> 1.2", ">= 1.2.3"
@@ -41,13 +41,7 @@ group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # Add the SQLite3 database for development and test
   gem "sqlite3", "~> 1.4", ">= 1.4.2"
-  # Rubocop linter gems for testing all aspects of the template
-  gem "rubocop-rails_config", "~> 1.3", ">= 1.3.3"
-  gem "rubocop-rspec", "~> 2.2"
-  gem "rubocop-faker", "~> 1.1"
-  gem "rubocop-i18n", "~> 3.0"
-  gem "rubocop-rake", "~> 0.5.1"
-  # Add this to both development and test to make the generators work
+  # Add this to both development and test to take advantage of the generators
   gem "rspec-rails", "~> 4.0", ">= 4.0.2"
   gem "factory_bot_rails", "~> 6.1"
   gem "faker", "~> 2.16"
@@ -62,10 +56,16 @@ group :development do
   gem "rack-mini-profiler", "~> 2.3", ">= 2.3.1"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
+  # Rubocop linter gems for linting the source code during development
+  gem "rubocop-rails_config", "~> 1.3", ">= 1.3.3"
+  gem "rubocop-rspec", "~> 2.2"
+  gem "rubocop-faker", "~> 1.1"
+  gem "rubocop-i18n", "~> 3.0"
+  gem "rubocop-rake", "~> 0.5.1"
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
+  # Adds support for Capybara testing and the Selenium Web Driver
   gem "capybara", ">= 3.26"
   gem "database_cleaner", "~> 2.0", ">= 2.0.1"
   gem "selenium-webdriver"
@@ -73,6 +73,7 @@ group :test do
   # Gems to support testing better
   gem "rexml", "~> 3.2", ">= 3.2.4"
   gem "shoulda-matchers", "~> 4.5", ">= 4.5.1"
+  gem "rails-controller-testing", "~> 1.0", ">= 1.0.5"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
