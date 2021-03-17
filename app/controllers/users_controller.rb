@@ -16,6 +16,11 @@ class UsersController < ApplicationController
 
   def show; end
 
+  def sign_out
+    self.session_user = nil
+    redirect_back fallback_location: root_path, notice: I18n.t("user.notice.sign_out")
+  end
+
   private
     def empty_user; @user = User.new; end
     def update_session_user; self.session_user = @user.id; end

@@ -21,6 +21,10 @@ module ApplicationSession
     def session_user=(user_id); cookies.encrypted[:session_user] = user_id; end
     def session_user; cookies.encrypted[:session_user]; end
 
+    def signed_in?
+      session_user ? true : false
+    end
+
     def current_user
       session_user ? (@_current_user ||= User.find(session_user)) : nil
     end
@@ -31,4 +35,7 @@ class ApplicationController < ActionController::Base
   include ApplicationSession
 
   before_action :configure_locale
+
+  helper_method :current_user
+  helper_method :signed_in?
 end
