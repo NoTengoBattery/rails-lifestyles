@@ -1,2 +1,4 @@
 @use '@csstools/normalize.css/normalize';
-@use 'users'
+@use 'modules/fontsource';
+@use 'modules/bootstrap';
+@use 'users';
