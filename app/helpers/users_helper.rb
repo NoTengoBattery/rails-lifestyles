@@ -8,7 +8,8 @@ module UsersHelper
   end
   def sign_in_or_out(params = {})
     if signed_in?
-      link_to I18n.t("user.sign_out"), sign_out_path, params, method: "delete"
+      params[:method] = "delete"
+      link_to I18n.t("user.sign_out"), sign_out_path, params
     else
       link_to I18n.t("user.sign_in"), sign_in_path, params
     end

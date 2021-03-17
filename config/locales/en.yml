@@ -5,10 +5,12 @@ en:
     home: "Home"
   user:
     alert:
+      sign_in: "Sign in failed, please check the provided information."
       sign_up: "Sign up failed, please check the provided information."
     notice:
-      sign_up: "Successfully signed up!"
+      sign_in: "Successfully signed in!"
       sign_out: "Successfully signed out!"
+      sign_up: "Successfully signed up!"
     sign_in: "Sign in"
     sign_out: "Sign out"
     sign_up: "Sign up"

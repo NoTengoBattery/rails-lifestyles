@@ -18,15 +18,32 @@ end
 
 module ApplicationSession
   private
-    def session_user=(user_id); cookies.encrypted[:session_user] = user_id; end
-    def session_user; cookies.encrypted[:session_user]; end
+    def session_user_destroy
+      cookies.encrypted[:session_user] = nil
+    end
+
+    def session_user=(user_id)
+      # Protecte agains malicious crafted user_id's
+      cookies.encrypted[:session_user] = (user_id&.integer? ? user_id : nil)
+    end
+
+    def session_user
+      # Protect against malicious crafted cookies
+      user_id = cookies.encrypted[:session_user]
+      user_id&.integer? ? (user_id) : (session_user_destroy; nil)
+    end
 
     def signed_in?
+      # There is no need for this, its pure convenience :D
       session_user ? true : false
     end
 
     def current_user
-      session_user ? (@_current_user ||= User.find(session_user)) : nil
+      signed_in? ? User.find(session_user) : nil
+    rescue ActiveRecord::RecordNotFound
+      # Protect against malicious crafted User IDs
+      session_user_destroy
+      nil
     end
 end
 
