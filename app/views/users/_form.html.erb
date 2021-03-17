@@ -1,7 +1,7 @@
-<div>
-  <%= form.label t("user.user_name") %>
+<div class="field">
+  <%= form.label :Name, t("user.user_name") %>
   <%= form.text_field :Name %>
 </div>
-<div>
+<div class="actions">
   <%= form.submit t(button) %>
 </div>

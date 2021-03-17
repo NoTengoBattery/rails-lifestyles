@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe "Users", type: :request do
+RSpec.describe "UsersRequests", type: :request do
   describe "GET /sign_up" do
     it "returns HTTP OK and renders the sign_up template" do
       get "/sign_up"

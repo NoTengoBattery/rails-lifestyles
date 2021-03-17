@@ -7,18 +7,18 @@
   <div class="collapse navbar-collapse" id="nvContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <%= link_to t("nav.home"), root_path, class: "nav-link" %>
+        <%= link_to t("home"), root_path, id: "home", class: "nav-link" %>
       </li>
       <li class="nav-item">
-        <%= link_to t("article.write"), root_path, class: "nav-link" %>
+        <%= link_to t("article.write"), root_path, id: "write", class: "nav-link" %>
       </li>
     </ul>
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <%= sign_up_or_profile class: "nav-link" %>
+        <%= sign_up_or_profile id: "user-link-1", class: "nav-user nav-link" %>
       </li>
       <li class="nav-item">
-        <%= sign_in_or_out class: "nav-link" %>
+        <%= sign_in_or_out id: "user-link-2", class: "nav-user nav-link" %>
       </li>
     </ul>
   </div>

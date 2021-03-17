@@ -1,8 +1,8 @@
 en:
+  home: "Home"
   name: "Lifestyle"
   nav:
     toggle: "Toggle navigation bar"
-    home: "Home"
   user:
     alert:
       sign_in: "Sign in failed, please check the provided information."
