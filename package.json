@@ -7,18 +7,13 @@
     "@rails/activestorage": "^6.1",
     "@rails/ujs": "^6.1",
     "@rails/webpacker": "^5.2",
-    "@tailwindcss/aspect-ratio": "^0.2",
-    "@tailwindcss/forms": "^0.2",
-    "@tailwindcss/typography": "^0.4",
     "sass": "^1.32",
     "turbolinks": "^5.2"
   },
   "version": "v0.01",
   "devDependencies": {
-    "@tailwindcss/postcss7-compat": "^2.0",
     "stylelint": "^13.12",
     "stylelint-config-sass-guidelines": "^8.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0",
     "webpack-dev-server": "^3.11"
   }
 }
