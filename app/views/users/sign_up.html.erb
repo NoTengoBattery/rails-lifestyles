@@ -1,2 +1,4 @@
-<h1>Users#sign_up</h1>
-<p>Find me in app/views/users/sign_up.html.erb</p>
+<h1><%= I18n.t("user.sign_up") %></h1>
+<%= form_with model: @user do |form| %>
+  <%= render form, form: form, button: "user.sign_up" %>
+<% end %>

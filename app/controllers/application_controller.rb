@@ -1,6 +1,4 @@
-class ApplicationController < ActionController::Base
-  before_action :configure_locale
-
+module LocaleController
   private
     def filter_locale(locale)
       return nil if locale.nil?
@@ -16,4 +14,21 @@ class ApplicationController < ActionController::Base
       browser = filter_locale(HTTP::Accept::Languages.parse(request.headers["Accept-Language"] || "").first&.locale)
       I18n.locale = cookies.permanent[:locale] = (browser || I18n.default_locale)
     end
+end
+
+module ApplicationSession
+  private
+    def session_user=(user_id); cookies.encrypted[:session_user] = user_id; end
+    def session_user; cookies.encrypted[:session_user]; end
+
+    def current_user
+      session_user ? (@_current_user ||= User.find(session_user)) : nil
+    end
+end
+
+class ApplicationController < ActionController::Base
+  include LocaleController
+  include ApplicationSession
+
+  before_action :configure_locale
 end
