@@ -6,7 +6,8 @@ class Article < ApplicationRecord
   validates :Text, length: { minimum: 100 }
   validates_presence_of :Title
   validates_uniqueness_of :Title, scope: :AuthorId
-  validates :Title, length: { minimum: 10, maximum: 100 }
+  validates :Title, length: { minimum: 4, maximum: 50 }
+  validates_presence_of :categories
 
   belongs_to :user, foreign_key: :AuthorId
   has_many :votes, foreign_key: :ArticleId
