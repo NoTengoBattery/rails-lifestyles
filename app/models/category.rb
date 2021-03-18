@@ -7,4 +7,10 @@ class Category < ApplicationRecord
   validates :Priority, numericality: { only_integer: true, greater_than: 0 }
 
   has_and_belongs_to_many :articles
+
+  scope :top_categories, -> { order(Priority: :desc) }
+
+  def most_recent_article
+    self.articles.order(CreatedAt: :desc).first
+  end
 end

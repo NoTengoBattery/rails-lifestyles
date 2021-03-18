@@ -7,7 +7,7 @@ until records >= new_records  do
   begin
     user = FactoryBot.create(:user)
     records += 1
-    puts "[#{records}/#{new_records}] Created a new record for the database with { name: #{user.Name} }"
+    puts "[#{records}/#{new_records}] New record with { name: #{user.Name} }"
   rescue ActiveRecord::RecordInvalid
     puts "Skipping invalid record: ~> '#{$!.message}'"
   rescue ActiveRecord::RecordNotUnique

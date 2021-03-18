@@ -1,1 +1,4 @@
-<%= render "featured" %>
+<%= render "featured", article: @featured, id: "featured" %>
+<div>
+  <%= render "category", categories: @categories, id: "category" %>
+</div>

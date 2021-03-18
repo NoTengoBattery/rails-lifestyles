@@ -13,7 +13,7 @@ until records >= new_records  do
     end
     article.save!
     records += 1
-    puts "[#{records}/#{new_records}] Created a new record for the database with { title: #{article.Title} }"
+    puts "[#{records}/#{new_records}] New record with { title: #{article.Title} }"
   rescue ActiveRecord::RecordInvalid
     puts "Skipping invalid record: ~> '#{$!.message}'"
   rescue ActiveRecord::RecordNotUnique

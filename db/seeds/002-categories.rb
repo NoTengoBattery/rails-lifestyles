@@ -7,7 +7,7 @@ until records >= new_records  do
   begin
     category = FactoryBot.create(:category)
     records += 1
-    puts "[#{records}/#{new_records}] Created a new record for the database with { name: #{category.Name} }"
+    puts "[#{records}/#{new_records}] New record with { name: #{category.Name} }"
   rescue ActiveRecord::RecordInvalid
     puts "Skipping invalid record: ~> '#{$!.message}'"
   rescue ActiveRecord::RecordNotUnique

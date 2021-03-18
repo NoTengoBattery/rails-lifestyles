@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2021_03_18_171810) do
-
   create_table "articles", force: :cascade do |t|
     t.integer "AuthorId", null: false
     t.string "Title", null: false
@@ -58,5 +57,4 @@ ActiveRecord::Schema.define(version: 2021_03_18_171810) do
     t.index ["ArticleId"], name: "index_votes_on_ArticleId"
     t.index ["UserId"], name: "index_votes_on_UserId"
   end
-
 end

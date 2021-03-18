@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   delete "sign_out", to: "users#sign_out"
   resources :users, except: [:create, :index, :new]
 
+  resources :articles
+
+  resources :categories
+
   patch "locale/:locale", to: "locales#site_locale", as: "site_locale"
   put "locale", to: "locales#default_locale", as: "default_locale"
 

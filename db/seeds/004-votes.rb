@@ -12,7 +12,7 @@ until records >= new_records  do
     vote.ArticleId = article_id
     vote.save!
     records += 1
-    puts "[#{records}/#{new_records}] Created a new record for the database with { user: #{vote.UserId} ; article: #{vote.ArticleId} }"
+    puts "[#{records}/#{new_records}] New record with { user: #{vote.UserId} ; article: #{vote.ArticleId} }"
   rescue ActiveRecord::RecordInvalid
     puts "Skipping invalid record: ~> '#{$!.message}'"
   rescue ActiveRecord::RecordNotUnique
