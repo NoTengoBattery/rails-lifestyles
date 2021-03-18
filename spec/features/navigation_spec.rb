@@ -21,7 +21,7 @@ RSpec.describe "Navigation", type: :system do
       find_and_test_link(".navbar-brand", I18n.t("name"), root_path)
     end
     it "shows the home link" do
-      find_and_test_link("#home", I18n.t("home"), root_path)
+      find_and_test_link("#home", I18n.t("home"), home_path)
     end
     it "shows the write new article link" do
       pending("Change the article link to the actual link")
