@@ -1,6 +1,6 @@
 puts "Deleted #{Article.delete_all} objects from the database"
 
-new_records = 5000
+new_records = 2000
 records = 0
 
 until records >= new_records  do
@@ -11,12 +11,14 @@ until records >= new_records  do
     rand(1..5).times do
       article.categories << Category.order(Arel.sql("RANDOM()")).first
     end
-    article.save
-    puts "Created a new record for the database with { title: #{article.Title} }"
+    article.save!
     records += 1
+    puts "[#{records}/#{new_records}] Created a new record for the database with { title: #{article.Title} }"
   rescue ActiveRecord::RecordInvalid
-    puts "Skipping invalid record..."
+    puts "Skipping invalid record: ~> '#{$!.message}'"
   rescue ActiveRecord::RecordNotUnique
-    puts "Skipping not unique record..."
+    puts "Skipping not unique record ~> '#{$!.message}'"
   end
 end
+
+puts "Created a total of #{records} records"
