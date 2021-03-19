@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :empty_article
-  before_action :article_from_params, only: [:edit, :show]
+  before_action :article_from_params, only: [:edit, :show, :update]
 
   def create
     @article = current_user.articles.build(article_params)
@@ -11,6 +11,15 @@ class ArticlesController < ApplicationController
     else
       flash.now[:alert] = I18n.t("article.alert.create")
       render :new
+    end
+  end
+
+  def update
+    @article.update(article_params)
+    if @article.valid?
+      redirect_to @article, notice: I18n.t("artcile.notice.edit")
+    else
+      redirect_to edit_article_path, notice: I18n.t("article.alert.edit")
     end
   end
 

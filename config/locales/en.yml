@@ -17,6 +17,7 @@ en:
     categories:         "Categories"
     create:             "Create article"
     image:              "Image"
+    modify:             "Modify article"
     select_category:    "Select one or more categories"
     select_instuctions: "Select one or several categories by holding the Control and/or Shift keys while clicking"
     text:               "Article's contents"

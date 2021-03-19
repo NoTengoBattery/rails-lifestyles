@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    @user = find_user_param_id || @user
+    @user = user_from_params || @user
     @user.update(user_params)
     if @user.valid?
       redirect_to @user, notice: I18n.t("user.notice.edit")
