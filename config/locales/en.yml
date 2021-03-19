@@ -1,8 +1,10 @@
 en:
+  close:                "Close"
   home:                 "Home"
   name:                 "Lifestyle"
   save_prohibited:      "prohibited this %{thing} from being saved."
   sure:                 "Are you sure? This action can not be undone!"
+
   pluralize:
     error:
       zero:             "no error"
