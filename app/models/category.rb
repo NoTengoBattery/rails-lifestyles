@@ -6,7 +6,7 @@ class Category < ApplicationRecord
   validates_uniqueness_of :Priority
   validates :Priority, numericality: { only_integer: true, greater_than: 0 }
 
-  has_and_belongs_to_many :articles
+  has_and_belongs_to_many :articles, dependent: :destroy
 
   scope :top_categories, -> { order(Priority: :desc) }
 

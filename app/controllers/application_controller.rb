@@ -1,5 +1,17 @@
 module LocaleController
   private
+    def cookie_locale
+      cookies.permanent[:locale]
+    end
+
+    def cookie_locale=(locale)
+      cookies.permanent[:locale] = local
+    end
+
+    def i18n_locale=(locale)
+      I18n.locale = cookies.permanent[:locale] = locale
+    end
+
     def filter_locale(locale)
       return nil if locale.nil?
       language = locale.to_s.split("-", 2).first&.to_sym
@@ -8,11 +20,11 @@ module LocaleController
     end
 
     def configure_locale(config = {})
-      cookies.permanent[:locale] = filter_locale(config[:new]) if config[:new]
-      I18n.locale = filter_locale(cookies.permanent[:locale])
-      return if cookies.permanent[:locale]
+      cookie_locale = filter_locale(config[:new]) if config[:new]
+      self.i18n_locale = filter_locale(cookie_locale)
+      return if cookie_locale
       browser = filter_locale(HTTP::Accept::Languages.parse(request.headers["Accept-Language"] || "").first&.locale)
-      I18n.locale = cookies.permanent[:locale] = (browser || I18n.default_locale)
+      self.i18n_locale = (browser || I18n.default_locale)
     end
 end
 
@@ -33,17 +45,17 @@ module ApplicationSession
       user_id&.integer? ? (user_id) : (session_user_destroy; nil)
     end
 
-    def signed_in?
-      # There is no need for this, its pure convenience :D
-      session_user ? true : false
-    end
-
     def current_user
-      signed_in? ? User.find(session_user) : nil
+      session_user ? User.find(session_user) : nil
     rescue ActiveRecord::RecordNotFound
       # Protect against malicious crafted User IDs
       session_user_destroy
       nil
+    end
+
+    def signed_in?
+      # There is no need for this, its pure convenience :D
+      current_user ? true : false
     end
 end
 

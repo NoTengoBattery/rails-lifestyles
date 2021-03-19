@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     if @user.valid?
       redirect_to @user, notice: I18n.t("user.notice.edit")
     else
-      redirect_to edit_user_url, notice: I18n.t("user.alert.edit")
+      redirect_to edit_user_path, notice: I18n.t("user.alert.edit")
     end
   end
 

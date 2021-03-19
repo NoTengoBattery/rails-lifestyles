@@ -10,7 +10,7 @@ class Article < ApplicationRecord
   validates_presence_of :categories
 
   belongs_to :user, foreign_key: :AuthorId, counter_cache: true
-  has_many :votes, foreign_key: :ArticleId
+  has_many :votes, foreign_key: :ArticleId, dependent: :destroy
   has_and_belongs_to_many :categories
 
   scope :featured, -> { joins(:votes).order(votes_count: :desc).first }

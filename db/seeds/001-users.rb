@@ -1,5 +1,3 @@
-puts "Deleted #{User.delete_all} objects from the database"
-
 new_records = 100
 records = 0
 invalid = 0
