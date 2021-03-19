@@ -29,6 +29,7 @@ RSpec.describe "UsersRequests", type: :request do
 
   describe "GET /edit" do
     it "returns HTTP OK and renders the edit template" do
+      pending("Implement the user's edit form")
       get "/users/:id/edit"
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:edit)

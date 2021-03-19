@@ -2,6 +2,7 @@ puts "Deleted #{Vote.delete_all} objects from the database"
 
 new_records = 2500
 records = 0
+invalid = 0
 
 until records >= new_records  do
   begin
@@ -14,10 +15,11 @@ until records >= new_records  do
     records += 1
     puts "[#{records}/#{new_records}] New record with { user: #{vote.UserId} ; article: #{vote.ArticleId} }"
   rescue ActiveRecord::RecordInvalid
+    invalid += 1
     puts "Skipping invalid record: ~> '#{$!.message}'"
   rescue ActiveRecord::RecordNotUnique
     puts "Skipping not unique record ~> '#{$!.message}'"
   end
 end
 
-puts "Created a total of #{records} records"
+puts "Created a total of #{records} records, #{invalid} validations failed"
