@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
   get "sign_up", to: "users#sign_up"
+  post "sign_up", to: "users#new_user"
   get "sign_in", to: "users#sign_in"
-  get "sign_out", to: "users#sign_out"
-  resources :users, except: [:index, :new]
+  post "sign_in", to: "users#new_session"
+  delete "sign_out", to: "users#sign_out"
+  resources :users, except: [:create, :index, :new]
+
+  resources :articles
+
+  resources :categories
 
   patch "locale/:locale", to: "locales#site_locale", as: "site_locale"
   put "locale", to: "locales#default_locale", as: "default_locale"
 
-  root "users#sign_in"
+  get "home", to: "pages#home"
+
+  root "pages#home"
 end

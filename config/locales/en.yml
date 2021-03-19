@@ -1,8 +1,19 @@
 en:
+  home: "Home"
+  name: "Lifestyle"
+  nav:
+    toggle: "Toggle navigation bar"
   user:
     alert:
-      sign_up: "Signing up failed for this user."
+      sign_in: "Sign in failed, please check the provided information."
+      sign_up: "Sign up failed, please check the provided information."
     notice:
-      sign_up: "User successfully signed up!"
+      sign_in: "Successfully signed in!"
+      sign_out: "Successfully signed out!"
+      sign_up: "Successfully signed up!"
+    sign_in: "Sign in"
+    sign_out: "Sign out"
     sign_up: "Sign up"
     user_name: "User name"
+  article:
+    write: "Write an article"

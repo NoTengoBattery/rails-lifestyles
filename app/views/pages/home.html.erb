@@ -1,0 +1,4 @@
+<%= render "featured", article: @featured, id: "featured" unless @featured.empty? %>
+<div>
+  <%= render "category", categories: @categories, id: "category" unless @categories.empty? %>
+</div>

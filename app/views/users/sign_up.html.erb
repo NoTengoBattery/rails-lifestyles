@@ -1,4 +1,4 @@
-<h1><%= I18n.t("user.sign_up") %></h1>
-<%= form_with model: @user do |form| %>
-  <%= render form, form: form, button: "user.sign_up" %>
+<h1><%= t("user.sign_up") %></h1>
+<%= form_with model: @user, url: sign_up_path do |form| %>
+  <%= render "form", form: form, button: "user.sign_up" %>
 <% end %>

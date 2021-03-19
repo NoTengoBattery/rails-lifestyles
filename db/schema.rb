@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_16_210003) do
+ActiveRecord::Schema.define(version: 2021_03_18_171810) do
   create_table "articles", force: :cascade do |t|
     t.integer "AuthorId", null: false
     t.string "Title", null: false
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_03_16_210003) do
     t.date "CreatedAt", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "votes_count"
     t.index ["CreatedAt"], name: "index_articles_on_CreatedAt"
     t.index ["Title"], name: "index_articles_on_Title", unique: true
   end
@@ -43,6 +44,8 @@ ActiveRecord::Schema.define(version: 2021_03_16_210003) do
     t.string "Name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "articles_count"
+    t.integer "votes_count"
     t.index ["Name"], name: "index_users_on_Name", unique: true
   end
 
