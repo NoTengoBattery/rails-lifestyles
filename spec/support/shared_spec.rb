@@ -14,6 +14,7 @@ RSpec.shared_examples "build valid article with vote" do
     vote = user.votes.build
     vote.ArticleId = featured.id
     vote.save!
+    featured.reload
   rescue ActiveRecord::RecordInvalid
     retry
   end

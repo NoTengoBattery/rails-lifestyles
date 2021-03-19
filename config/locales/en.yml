@@ -1,26 +1,34 @@
 en:
-  home: "Home"
-  name: "Lifestyle"
+  home:                "Home"
+  name:                "Lifestyle"
+
+  date:
+    formats:
+      default: "%B %d, %Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
+
+  article:
+    by:                "By"
+    write:             "Write an article"
   nav:
-    toggle: "Toggle navigation bar"
+    toggle:            "Toggle navigation bar"
   user:
     alert:
-      edit: "Edit user details failed."
-      sign_in: "Sign in failed."
-      sign_up: "Sign up failed."
+      edit:            "Edit user details failed."
+      sign_in:         "Sign in failed."
+      sign_up:         "Sign up failed."
     notice:
-      edit: "User details edited!"
-      sign_in: "Signed in!"
-      sign_out: "Signed out!"
-      sign_up: "Signed up!"
-    edit: "Edit"
-    edit_profile: "Edit user details"
+      edit:            "User details edited!"
+      sign_in:         "Signed in!"
+      sign_out:        "Signed out!"
+      sign_up:         "Signed up!"
+    edit:              "Edit"
+    edit_profile:      "Edit user details"
     my-voted-articles: "My most voted articles"
-    no-articles: "You have not written any post"
-    sign_in: "Sign in"
-    sign_out: "Sign out"
-    sign_up: "Sign up"
-    total-liked: "Total liked posts"
-    user_name: "User name"
-  article:
-    write: "Write an article"
+    no-articles:       "You have not written any post"
+    sign_in:           "Sign in"
+    sign_out:          "Sign out"
+    sign_up:           "Sign up"
+    total-liked:       "Total liked posts"
+    user_name:         "User name"
