@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   delete "sign_out", to: "users#sign_out"
   resources :users, except: [:create, :index, :new]
 
-  resources :articles
+  resources :articles, except: [:index]
 
   resources :categories
 
