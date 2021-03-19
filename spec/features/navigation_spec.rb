@@ -1,7 +1,23 @@
 RSpec.describe "Navigation", type: :system do
   describe "link" do
+    let (:user) { FactoryBot.create(:user) }
+    let (:category) { FactoryBot.create(:category) }
+    let (:featured) { FactoryBot.build(:article) }
+
     before do
+      build_featured
       visit root_path
+    end
+
+    def build_featured
+      featured.AuthorId = user.id
+      featured.categories << category
+      featured.save
+      vote = user.votes.build
+      vote.ArticleId = featured.id
+      vote.save
+      rescue ActiveRecord::RecordInvalid
+        retry
     end
 
     def sign_up_rutine
@@ -24,7 +40,6 @@ RSpec.describe "Navigation", type: :system do
       find_and_test_link("#home", I18n.t("home"), home_path)
     end
     it "shows the write new article link" do
-      pending("Change the article link to the actual link")
       find_and_test_link("#write", I18n.t("article.write"), new_article_path)
     end
     it "shows the sign up link when guest" do

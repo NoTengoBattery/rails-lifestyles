@@ -5,15 +5,22 @@ en:
     toggle: "Toggle navigation bar"
   user:
     alert:
-      sign_in: "Sign in failed, please check the provided information."
-      sign_up: "Sign up failed, please check the provided information."
+      edit: "Edit user details failed."
+      sign_in: "Sign in failed."
+      sign_up: "Sign up failed."
     notice:
-      sign_in: "Successfully signed in!"
-      sign_out: "Successfully signed out!"
-      sign_up: "Successfully signed up!"
+      edit: "User details edited!"
+      sign_in: "Signed in!"
+      sign_out: "Signed out!"
+      sign_up: "Signed up!"
+    edit: "Edit"
+    edit_profile: "Edit user details"
+    my-voted-articles: "My most voted articles"
+    no-articles: "You have not written any post"
     sign_in: "Sign in"
     sign_out: "Sign out"
     sign_up: "Sign up"
+    total-liked: "Total liked posts"
     user_name: "User name"
   article:
     write: "Write an article"

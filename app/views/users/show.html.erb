@@ -1,2 +1,21 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>
+  <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
+  <%= @user.Name %>
+</h1>
+<p>
+  <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+  <%= t("user.total-liked") %>:
+  <span><%= @votes.size %></span>
+</p>
+<h2>
+  <span class="iconify" data-icon="ri:file-text-fill" data-inline="false"></span>
+  <%= t("user.my-voted-articles") %>
+</h2>
+<% if @articles.size >= 1 %>
+  <%= render "article", articles: @articles, id: "article" %>
+<% else %>
+  <p>
+    <span class="iconify" data-icon="ri:error-warning-fill" data-inline="false"></span>
+    <%= t("user.no-articles") %>
+  </p>
+<% end %>

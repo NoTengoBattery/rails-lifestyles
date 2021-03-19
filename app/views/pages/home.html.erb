@@ -1,4 +1,4 @@
-<%= render "featured", article: @featured, id: "featured" unless @featured.empty? %>
+<%= render "featured", article: @featured, id: "featured" if @featured %>
 <div>
   <%= render "category", categories: @categories, id: "category" unless @categories.empty? %>
 </div>
