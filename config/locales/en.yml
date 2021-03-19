@@ -1,6 +1,13 @@
 en:
   home:                 "Home"
   name:                 "Lifestyle"
+  save_prohibited:      "prohibited this %{thing} from being saved."
+  sure:                 "Are you sure? This action can not be undone!"
+  pluralize:
+    error:
+      zero:             "no error"
+      one:              "1 error"
+      other:            "%{count} errors"
 
   date:
     formats:
@@ -9,10 +16,13 @@ en:
       long:             "%B %d, %Y"
 
   article:
+    article:            "Article"
     alert:
       create:           "This article could not be created."
+      edit:             "This article could not be edited."
     notice:
       create:           "Take a look at that wonderful new article!"
+      edit:             "Article updated successfully!"
     by:                 "By"
     categories:         "Categories"
     create:             "Create article"
@@ -26,21 +36,24 @@ en:
   nav:
     toggle:             "Toggle navigation bar"
   user:
+    user:               "User"
     alert:
       edit:             "Edit user details failed."
       sign_in:          "Sign in failed."
       sign_up:          "Sign up failed."
     notice:
+      destroy:          "The user and all asociated records have been desroyed."
       edit:             "User details edited!"
       sign_in:          "Signed in!"
       sign_out:         "Signed out!"
       sign_up:          "Signed up!"
     edit:               "Edit"
     edit_profile:       "Edit user details"
-    my-voted-articles:  "My most voted articles"
-    no-articles:        "You have not written any post"
+    my_voted_articles:  "My most voted articles"
+    no_articles:        "You have not written any article"
     sign_in:            "Sign in"
     sign_out:           "Sign out"
     sign_up:            "Sign up"
-    total-liked:        "Total liked posts"
+    total_voted:        "Total voted articles"
+    total_written:      "Total written articles"
     user_name:          "User name"

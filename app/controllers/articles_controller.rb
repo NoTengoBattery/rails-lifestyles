@@ -5,7 +5,6 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
     @article.CreatedAt = Time.now
-    byebug
     if @article.save
       redirect_to @article, notice: I18n.t("article.notice.create")
     else
@@ -17,9 +16,10 @@ class ArticlesController < ApplicationController
   def update
     @article.update(article_params)
     if @article.valid?
-      redirect_to @article, notice: I18n.t("artcile.notice.edit")
+      redirect_to @article, notice: I18n.t("article.notice.edit")
     else
-      redirect_to edit_article_path, notice: I18n.t("article.alert.edit")
+      flash.now[:alert] = I18n.t("article.alert.edit")
+      render :edit
     end
   end
 

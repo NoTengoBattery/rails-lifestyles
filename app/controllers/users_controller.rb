@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :empty_user
   before_action :session_user_destroy, only: [:sign_in, :sign_out, :sign_up]
-  before_action :user_from_params, only: [:edit, :show]
+  before_action :user_from_params, only: [:destroy, :edit, :show]
   after_action :session_update_user, only: [:new_user, :new_session]
 
   def new_user
@@ -34,13 +34,19 @@ class UsersController < ApplicationController
     if @user.valid?
       redirect_to @user, notice: I18n.t("user.notice.edit")
     else
-      redirect_to edit_user_path, notice: I18n.t("user.alert.edit")
+      flash.now[:alert] = I18n.t("user.alert.edit")
+      render :edit
     end
   end
 
   def show
     @votes = @user.votes
     @articles = @user.articles.order(votes_count: :desc).limit(10)
+  end
+
+  def destroy
+    @user.destroy
+    redirect_to root_path, notice: I18n.t("user.notice.destroy")
   end
 
   private

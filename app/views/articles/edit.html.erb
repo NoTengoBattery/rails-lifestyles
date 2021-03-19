@@ -1,4 +1,4 @@
 <h1><%= t("article.modify") %></h1>
 <%= form_with model: @article, url: article_path(@article), method: :patch do |form| %>
-  <%= render "form", form: form, button: "article.modify" %>
+  <%= render "form", model: @article, form: form, button: "article.modify" %>
 <% end %>

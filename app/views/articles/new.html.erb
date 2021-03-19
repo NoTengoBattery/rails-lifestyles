@@ -1,4 +1,4 @@
 <h1><%= t("article.write") %></h1>
 <%= form_with model: @article, url: articles_path do |form| %>
-  <%= render "form", form: form, button: "article.create" %>
+  <%= render "form", model: @article, form: form, button: "article.create" %>
 <% end %>

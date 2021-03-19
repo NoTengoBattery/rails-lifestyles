@@ -1,0 +1,15 @@
+<% if my_model.errors.any? %>
+  <div id="error-explanation" class="alert alert-warning">
+    <p class="lead">
+      <strong>
+        <%= t("pluralize.error", count: my_model.errors.count) %>
+        <%= t("save_prohibited", thing: my_name.downcase) %>
+      </strong>
+    </p>
+    <ul>
+      <% my_model.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

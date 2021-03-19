@@ -1,11 +1,11 @@
+<%= render 'shared/form_errors', my_model: model, my_name: t("article.article") %>
 <div class="field">
   <%= form.label :Title, t("article.title") %>
   <%= form.text_field :Title %>
 </div>
 <div class="field">
   <%= form.label :category_ids, t("article.categories") %>
-  <%= form.collection_select :category_ids, @categories, :id, :Name, {},
-        {multiple: true, size: 6, include_blank: false} %>
+  <%= form.collection_select :category_ids, @categories, :id, :Name, {}, {multiple: true, size: 6, include_blank: false} %>
   <small>
     <%= t("article.select_instuctions") %>
   </small>

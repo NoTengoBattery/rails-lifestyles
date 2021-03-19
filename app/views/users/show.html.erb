@@ -1,21 +1,40 @@
-<h1>
-  <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
-  <%= @user.Name %>
-</h1>
-<p>
-  <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
-  <%= t("user.total-liked") %>:
-  <span><%= @votes.size %></span>
-</p>
-<h2>
-  <span class="iconify" data-icon="ri:file-text-fill" data-inline="false"></span>
-  <%= t("user.my-voted-articles") %>
-</h2>
-<% if @articles.size >= 1 %>
-  <%= render "article", articles: @articles, id: "article" %>
-<% else %>
-  <p>
-    <span class="iconify" data-icon="ri:error-warning-fill" data-inline="false"></span>
-    <%= t("user.no-articles") %>
-  </p>
-<% end %>
+<div class="row">
+  <div class="col-12 mb-2">
+    <h1 id="name">
+      <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
+      <%= @user.Name %>
+    </h1>
+    <small id="edit-link">
+      <span class="iconify" data-icon="ri:edit-2-fill" data-inline="false"></span>
+      <%= link_to t("user.edit_profile"), edit_user_path(@user) %>
+    </small>
+    <small id="delete-link">
+      <span class="iconify" data-icon="ri:delete-bin-fill" data-inline="false"></span>
+      <%= link_to t("user.delete_profile"), user_path(@user), method: :delete, data: { confirm: t("sure") } %>
+    </small>
+  </div>
+  <span id="votes" class="col-12">
+    <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+    <%= t("user.total_voted") %>:
+    <span><%= @votes.size %></span>
+  </span>
+  <span id="written" class="col-12">
+    <span class="iconify" data-icon="ri:file-text-fill" data-inline="false"></span>
+    <%= t("user.total_written") %>:
+    <span><%= @articles.size %></span>
+  </span>
+  <h2 id="my-top" class="col-12 my-2">
+    <span class="iconify" data-icon="ri:file-text-fill" data-inline="false"></span>
+    <%= t("user.my_voted_articles") %>
+  </h2>
+  <div id="top-ten" class="col-12">
+    <% if @articles.size >= 1 %>
+      <%= render "article", articles: @articles, id: "article" %>
+    <% else %>
+      <p>
+        <span class="iconify" data-icon="ri:error-warning-fill" data-inline="false"></span>
+        <%= t("user.no_articles") %>
+      </p>
+    <% end %>
+  </div>
+</div>
