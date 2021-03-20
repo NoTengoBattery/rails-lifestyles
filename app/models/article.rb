@@ -14,4 +14,5 @@ class Article < ApplicationRecord
   has_and_belongs_to_many :categories
 
   scope :featured, -> { joins(:votes).order(votes_count: :desc).first }
+  scope :recent, -> { order(CreatedAt: :desc) }
 end

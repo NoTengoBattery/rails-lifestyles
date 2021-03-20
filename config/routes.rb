@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   resources :articles, except: [:index]
 
-  resources :categories
+  resources :categories, only: [:show]
 
   patch "locale/:locale", to: "locales#site_locale", as: "site_locale"
   put "locale", to: "locales#default_locale", as: "default_locale"
