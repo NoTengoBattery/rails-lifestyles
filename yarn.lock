@@ -861,6 +861,16 @@
   resolved "https://registry.yarnpkg.com/@fontsource/work-sans/-/work-sans-4.2.2.tgz#f125f018a6b1baa5092901de3a0ef95f58fcefe4"
   integrity sha512-fFm8a1TbE+qDnRNsf4R6Z/yZP2f3mbj54zSoWUMIWVkgTHM0RfpcOTqoIp7Aj5jon6na0Oynlq5yXvMA5p3pKA==
 
+"@iconify-icons/ri@^1.1":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/ri/-/ri-1.1.0.tgz#2ad1aab443c304e3a0a4a3e708b1dee0ed95ce5b"
+  integrity sha512-9773shGDNQ5XwULVRFGIl6lYEEML0C2jUJE0tuGl7G2oEl3mh8bnLUdt0l3ntlONaN5F4swoSDP27P5j8ezyeA==
+
+"@iconify/iconify@^1.0":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@iconify/iconify/-/iconify-1.0.7.tgz#22e6d384482995738746eeb38b9b76588df41d57"
+  integrity sha512-qCbH1V/Ceg302lrgBiiXCZAyqMAq8KqsHYokCpUvgBH6yYfAmvlSkEEBrmJdHofQvfY/+xaeQcsOOTjW7JakNw==
+
 "@nodelib/fs.scandir@2.1.4":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz#d4b3549a5db5de2683e0c1071ab4f140904bbf69"

@@ -1,19 +1,60 @@
 en:
-  home: "Home"
-  name: "Lifestyle"
-  nav:
-    toggle: "Toggle navigation bar"
-  user:
-    alert:
-      sign_in: "Sign in failed, please check the provided information."
-      sign_up: "Sign up failed, please check the provided information."
-    notice:
-      sign_in: "Successfully signed in!"
-      sign_out: "Successfully signed out!"
-      sign_up: "Successfully signed up!"
-    sign_in: "Sign in"
-    sign_out: "Sign out"
-    sign_up: "Sign up"
-    user_name: "User name"
+  close:                "Close"
+  home:                 "Home"
+  name:                 "Lifestyle"
+  sure:                 "Are you sure? This action can not be undone!"
+
+  pluralize:
+    error_saved:
+      zero:             "no error prohibited this %{thing} from being saved."
+      one:              "1 error prohibited this %{thing} from being saved."
+      other:            "%{count} errors prohibited this %{thing} from being saved."
+
+  date:
+    formats:
+      default:          "%B %d, %Y"
+      short:            "%b %d"
+      long:             "%B %d, %Y"
+
   article:
-    write: "Write an article"
+    article:            "Article"
+    alert:
+      create:           "This article could not be created."
+      edit:             "This article could not be edited."
+    notice:
+      create:           "Take a look at that wonderful new article!"
+      edit:             "Article updated successfully!"
+    by:                 "By"
+    categories:         "Categories"
+    create:             "Create article"
+    image:              "Image"
+    modify:             "Modify article"
+    select_category:    "Select one or more categories"
+    select_instuctions: "Select one or several categories by holding the Control and/or Shift keys while clicking"
+    text:               "Article's contents"
+    title:              "Title"
+    write:              "Write an article"
+  nav:
+    toggle:             "Toggle navigation bar"
+  user:
+    user:               "User"
+    alert:
+      edit:             "Edit user details failed."
+      sign_in:          "Sign in failed."
+      sign_up:          "Sign up failed."
+    notice:
+      destroy:          "The user and all asociated records have been desroyed."
+      edit:             "User details edited!"
+      sign_in:          "Signed in!"
+      sign_out:         "Signed out!"
+      sign_up:          "Signed up!"
+    edit:               "Edit"
+    edit_profile:       "Edit user details"
+    my_voted_articles:  "My most voted articles"
+    no_articles:        "You have not written any article"
+    sign_in:            "Sign in"
+    sign_out:           "Sign out"
+    sign_up:            "Sign up"
+    total_voted:        "Total voted articles"
+    total_written:      "Total written articles"
+    user_name:          "User name"

@@ -1,5 +1,3 @@
-puts "Deleted #{Category.delete_all} objects from the database"
-
 new_records = 20
 records = 0
 invalid = 0

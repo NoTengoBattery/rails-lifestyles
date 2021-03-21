@@ -17,7 +17,7 @@ RSpec.describe "UserSession", type: :system do
       sing_and_test(
         name: initial_user.Name,
         button: I18n.t("user.sign_up"),
-        flash_selector: ".notice",
+        flash_selector: ".alert-success",
         flash_text: I18n.t("user.notice.sign_up"),
         test_selector: "#user-link-1",
         test_text: initial_user.Name
@@ -27,7 +27,7 @@ RSpec.describe "UserSession", type: :system do
       sing_and_test(
         name: nil,
         button: I18n.t("user.sign_up"),
-        flash_selector: ".alert",
+        flash_selector: ".alert-danger",
         flash_text: I18n.t("user.alert.sign_up"),
         test_selector: "#user-link-1",
         test_text: I18n.t("user.sign_up")
@@ -49,7 +49,7 @@ RSpec.describe "UserSession", type: :system do
       sing_and_test(
         name: initial_user.Name,
         button: I18n.t("user.sign_in"),
-        flash_selector: ".notice",
+        flash_selector: ".alert-success",
         flash_text: I18n.t("user.notice.sign_in"),
         test_selector: "#user-link-1",
         test_text: initial_user.Name
@@ -59,7 +59,7 @@ RSpec.describe "UserSession", type: :system do
       sing_and_test(
         name: nil,
         button: I18n.t("user.sign_in"),
-        flash_selector: ".alert",
+        flash_selector: ".alert-danger",
         flash_text: I18n.t("user.alert.sign_in"),
         test_selector: "#user-link-1",
         test_text: I18n.t("user.sign_up")

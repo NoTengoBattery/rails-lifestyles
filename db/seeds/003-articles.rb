@@ -1,6 +1,4 @@
-puts "Deleted #{Article.delete_all} objects from the database"
-
-new_records = 2000
+new_records = 250
 records = 0
 invalid = 0
 

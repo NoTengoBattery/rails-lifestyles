@@ -1,11 +1,9 @@
 <% categories.each do |category| %>
   <div id="<%= "div-#{id}-#{category.id}" %>">
+    <p><%= link_to category.Name, category_path(category) %></p>
     <figure id="<%= "figure-#{id}-#{category.id}" %>" class="figure">
-      <img id="<%= "img-#{id}-#{category.id}" %>" src="/image.jpg" class="figure-img img-fluid rounded" alt="<%= category.Name %>">
+      <%= image_tag("/image.jpg", id: "img-#{id}-#{category.id}", class: "figure-img img-fluid rounded", alt: category.Name) %>
       <figcaption id="<%= "figcaption-#{id}-#{category.id}" %>" class="figure-caption">
-        <%= link_to category.Name, category_path(category) %>
-      </figcaption>
-      <figcaption id="<%= "figcaption-#{id}-#{category.id}-#{recent_article(category).id}" %>" class="figure-caption">
         <%= link_to recent_article(category).Title, article_path(recent_article(category)) %>
       </figcaption>
     </figure>

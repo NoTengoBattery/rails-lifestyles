@@ -1,0 +1,26 @@
+<div class="row">
+  <h1 class="col-12"><%= @article.Title %></h1>
+  <small id="author" class="col-9">
+    <%= t("article.by") %>
+    <%= link_to @author.Name, @author %>
+  </small>
+  <small id="votes" class="col-3 text-right">
+    <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+    <%= @article.votes.size %>
+  </small>
+  <small id="date" class="col-12">
+    <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
+    On <%= l(@article.CreatedAt) %>
+  </small>
+  <%= image_tag("/image.jpg", id: "article-cover", class: "col-12 mt-2 img-fluid article-cover", alt: @article.Title) %>
+  <small id="categories" class="col-12">
+    <span class="iconify" data-icon="ri:list-unordered" data-inline="false"></span>
+    Categories:
+    <% @article.categories.each do |category| %>
+      <%= link_to category.Name, category %>
+    <% end %>
+  </small>
+  <div id="text" class="col-12 mt-2 text-break">
+    <%= @article.Text %>
+  </div>
+</div>

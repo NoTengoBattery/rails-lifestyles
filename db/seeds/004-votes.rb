@@ -1,6 +1,4 @@
-puts "Deleted #{Vote.delete_all} objects from the database"
-
-new_records = 2500
+new_records = 1500
 records = 0
 invalid = 0
 
