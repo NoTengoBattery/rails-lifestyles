@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :sign_in!, only: [:edit, :show, :update, :destroy]
   before_action :empty_user
   before_action :session_user_destroy, only: [:sign_in, :sign_out, :sign_up]
   before_action :user_from_params, only: [:destroy, :edit, :show]
@@ -7,7 +8,8 @@ class UsersController < ApplicationController
   def new_user
     @user = User.new(user_params)
     if @user.save
-      redirect_to @user, notice: I18n.t("user.notice.sign_up")
+      redirect_me = backpath || @user
+      redirect_to redirect_me, notice: I18n.t("user.notice.sign_up")
     else
       flash.now[:alert] = I18n.t("user.alert.sign_up")
       render :sign_up
@@ -21,7 +23,8 @@ class UsersController < ApplicationController
   def new_session
     @user = User.find_by(user_params) || @user
     if @user.valid?
-      redirect_to @user, notice: I18n.t("user.notice.sign_in")
+      redirect_me = backpath || @user
+      redirect_to redirect_me, notice: I18n.t("user.notice.sign_in")
     else
       flash.now[:alert] = I18n.t("user.alert.sign_in")
       render :sign_in

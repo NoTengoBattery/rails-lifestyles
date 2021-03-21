@@ -6,8 +6,6 @@ en:
 
   pluralize:
     error_saved:
-      zero:             "no error prohibited this %{thing} from being saved."
-      one:              "1 error prohibited this %{thing} from being saved."
       other:            "%{count} errors prohibited this %{thing} from being saved."
 
   date:
@@ -40,6 +38,7 @@ en:
     user:               "User"
     alert:
       edit:             "Edit user details failed."
+      need_sign_in:     "You need to sign in before continuing..."
       sign_in:          "Sign in failed."
       sign_up:          "Sign up failed."
     notice:

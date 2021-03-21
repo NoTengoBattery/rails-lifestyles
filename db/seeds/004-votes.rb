@@ -2,7 +2,7 @@ new_records = 1500
 records = 0
 invalid = 0
 
-until records >= new_records  do
+until records >= new_records do
   begin
     vote = FactoryBot.build(:vote)
     user_id = User.order(Arel.sql("RANDOM()")).first.id
