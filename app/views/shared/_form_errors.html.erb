@@ -5,8 +5,7 @@
   </button>
     <p class="lead">
       <strong>
-        <%= t("pluralize.error", count: my_model.errors.count) %>
-        <%= t("save_prohibited", thing: my_name.downcase) %>
+        <%= t("pluralize.error_saved", count: my_model.errors.count, thing: my_name.downcase) %>
       </strong>
     </p>
     <ul>

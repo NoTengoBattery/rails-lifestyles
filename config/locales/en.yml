@@ -2,14 +2,13 @@ en:
   close:                "Close"
   home:                 "Home"
   name:                 "Lifestyle"
-  save_prohibited:      "prohibited this %{thing} from being saved."
   sure:                 "Are you sure? This action can not be undone!"
 
   pluralize:
-    error:
-      zero:             "no error"
-      one:              "1 error"
-      other:            "%{count} errors"
+    error_saved:
+      zero:             "no error prohibited this %{thing} from being saved."
+      one:              "1 error prohibited this %{thing} from being saved."
+      other:            "%{count} errors prohibited this %{thing} from being saved."
 
   date:
     formats:
