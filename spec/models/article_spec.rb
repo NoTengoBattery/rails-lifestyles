@@ -10,7 +10,6 @@ RSpec.describe Article, type: :model do
     it { should validate_length_of(:Title).is_at_least(4).is_at_most(150) }
     it { should validate_presence_of(:Text) }
     it { should validate_length_of(:Text).is_at_least(100) }
-    it { should validate_presence_of(:Image) }
     it { should validate_presence_of(:CreatedAt) }
     it { should validate_presence_of(:categories) }
   end

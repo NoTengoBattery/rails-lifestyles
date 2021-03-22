@@ -1,7 +1,6 @@
 class Article < ApplicationRecord
   validates_presence_of :AuthorId
   validates_presence_of :CreatedAt
-  validates_presence_of :Image
   validates_presence_of :Text
   validates :Text, length: { minimum: 100 }
   validates_presence_of :Title
@@ -15,4 +14,21 @@ class Article < ApplicationRecord
 
   scope :featured, -> { joins(:votes).order(votes_count: :desc).first }
   scope :recent, -> { order(CreatedAt: :desc) }
+
+  has_one_attached :image
+
+  validate :acceptable_image
+
+  def acceptable_image
+    return unless image.attached?
+
+    unless image.byte_size <= 5.megabyte
+      errors.add(:image, "is too big, must be less than 5 megabytes")
+    end
+
+    acceptable_types = ["image/jpeg", "image/png", "image/tiff"]
+    unless acceptable_types.include?(image.content_type)
+      errors.add(:image, "must be a JPEG, PNG or TIFF")
+    end
+  end
 end
