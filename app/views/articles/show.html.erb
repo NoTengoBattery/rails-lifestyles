@@ -24,6 +24,9 @@
       <%= link_to category.Name, category %>
     <% end %>
   </small>
+  <% if can_vote? %>
+    <%= vote_button %>
+  <% end %>
   <div id="text" class="col-12 mt-2 text-break">
     <%= @article.Text %>
   </div>
