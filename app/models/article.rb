@@ -16,4 +16,19 @@ class Article < ApplicationRecord
   scope :recent, -> { order(CreatedAt: :desc) }
 
   has_one_attached :image
+
+  validate :acceptable_image
+
+  def acceptable_image
+    return unless image.attached?
+
+    unless image.byte_size <= 5.megabyte
+      errors.add(:image, "is too big, must be less than 5 megabytes")
+    end
+
+    acceptable_types = ["image/jpeg", "image/png", "image/gif"]
+    unless acceptable_types.include?(image.content_type)
+      errors.add(:image, "must be a GIF, JPEG or PNG")
+    end
+  end
 end

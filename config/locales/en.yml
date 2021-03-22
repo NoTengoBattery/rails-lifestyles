@@ -6,7 +6,7 @@ en:
 
   pluralize:
     error_saved:
-      one:              "one error prohibited this %{thing} from being saved."
+      one:              "One error prohibited this %{thing} from being saved."
       other:            "%{count} errors prohibited this %{thing} from being saved."
 
   date:

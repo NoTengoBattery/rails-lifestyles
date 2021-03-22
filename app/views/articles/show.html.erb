@@ -16,7 +16,7 @@
     <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
     On <%= l(@article.CreatedAt) %>
   </small>
-  <%= image_tag("/image.jpg", id: "article-cover", class: "col-12 mt-2 img-fluid article-cover", alt: @article.Title) %>
+  <%= image_tag(@article.image, id: "article-cover", class: "col-12 mt-2 img-fluid article-cover", alt: @article.Title) %>
   <small id="categories" class="col-12">
     <span class="iconify" data-icon="ri:list-unordered" data-inline="false"></span>
     Categories:
