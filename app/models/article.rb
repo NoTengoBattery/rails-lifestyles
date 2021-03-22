@@ -1,7 +1,6 @@
 class Article < ApplicationRecord
   validates_presence_of :AuthorId
   validates_presence_of :CreatedAt
-  validates_presence_of :Image
   validates_presence_of :Text
   validates :Text, length: { minimum: 100 }
   validates_presence_of :Title
@@ -15,4 +14,6 @@ class Article < ApplicationRecord
 
   scope :featured, -> { joins(:votes).order(votes_count: :desc).first }
   scope :recent, -> { order(CreatedAt: :desc) }
+
+  has_one_attached :image
 end
