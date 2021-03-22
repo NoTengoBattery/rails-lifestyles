@@ -1,4 +1,4 @@
-new_records = 250
+new_records = 50
 records = 0
 invalid = 0
 
@@ -10,6 +10,7 @@ until records >= new_records do
     rand(1..5).times do
       article.categories << Category.order(Arel.sql("RANDOM()")).first
     end
+    sleep 0.125
     article.save!
     records += 1
     puts "[#{records}/#{new_records}] New record with { title: #{article.Title} }"

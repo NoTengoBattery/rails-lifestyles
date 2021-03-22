@@ -1,6 +1,6 @@
 <div id="<%= "div-#{id}" %>">
   <figure id="<%= "figure-#{id}" %>" class="figure">
-    <img id="<%= "img-#{id}" %>" src="/image.jpg" class="figure-img img-fluid rounded" alt="<%= article.Title %>">
+    <%= image_tag(img_large(article), id: "img-#{id}", class: "figure-img img-fluid rounded", alt: article.Title) %>
     <figcaption id="<%= "figcaption-#{id}" %>" class="figure-caption">
       <%= link_to article.Title, article_path(article) %>
     </figcaption>

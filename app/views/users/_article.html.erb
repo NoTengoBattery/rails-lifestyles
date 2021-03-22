@@ -1,7 +1,7 @@
 <div class="list-group">
   <% articles.each do |article| %>
     <%= link_to article_path(article), id: "a-#{id}-#{article.id}", class: "list-group-item list-group-item-action" do %>
-      <%= image_tag("/image.jpg", id: "img-#{id}-#{article.id}", class: "img-fluid thumb-article", alt: article.Title) %>
+      <%= image_tag(img_medium(article), id: "img-#{id}-#{article.id}", class: "img-fluid thumb-article", alt: article.Title) %>
       <div id="<%= "div-#{id}-#{article.id}" %>" class="d-flex w-100 justify-content-between">
         <h5 id="<%= "h5-#{id}-#{article.id}" %>" class="pr-5 text-truncate"><%= article.Title %></h5>
         <span id="<%= "votes-#{id}-#{article.id}" %>" class="text-nowrap">

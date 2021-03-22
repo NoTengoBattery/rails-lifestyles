@@ -1,4 +1,4 @@
-new_records = 1500
+new_records = 500
 records = 0
 invalid = 0
 

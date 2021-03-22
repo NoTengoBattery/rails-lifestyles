@@ -23,8 +23,8 @@ class UsersController < ApplicationController
   end
 
   def new_session
-    @user = User.find_by(user_params) || @user
-    if @user.valid?
+    @user = User.find_by(user_params) || User.new(user_params)
+    unless @user.new_record?
       redirect_me = backpath || @user
       redirect_to redirect_me, notice: I18n.t("user.notice.sign_in")
     else

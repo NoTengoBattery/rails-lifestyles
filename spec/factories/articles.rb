@@ -4,5 +4,6 @@ FactoryBot.define do
     Title { Faker::Lorem.sentence(word_count: 2, random_words_to_add: 20) }
     Text { Faker::Lorem.paragraph(sentence_count: 5, random_sentences_to_add: 100) }
     CreatedAt { Faker::Date.in_date_period }
+    image { Rack::Test::UploadedFile.new("public/image_lq.jpg", "image/jpeg") }
   end
 end

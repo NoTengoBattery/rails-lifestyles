@@ -26,9 +26,9 @@ class Article < ApplicationRecord
       errors.add(:image, "is too big, must be less than 5 megabytes")
     end
 
-    acceptable_types = ["image/jpeg", "image/png", "image/gif"]
+    acceptable_types = ["image/jpeg", "image/png", "image/tiff"]
     unless acceptable_types.include?(image.content_type)
-      errors.add(:image, "must be a GIF, JPEG or PNG")
+      errors.add(:image, "must be a JPEG, PNG or TIFF")
     end
   end
 end
