@@ -3,6 +3,11 @@
   <%= form.label :Name, t("user.user_name") %>
   <%= form.text_field :Name %>
 </div>
+<% if link_path %>
+  <div class="link">
+    <%= link_to I18n.t(link_text), link_path %>
+  </div>
+<% end %>
 <div class="actions">
   <%= form.submit t(button) %>
 </div>

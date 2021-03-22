@@ -1,4 +1,5 @@
 require "rails_helper"
+require "shared_rutines"
 
 RSpec.describe "UsersRequests", type: :request do
   def sign_up_rutine

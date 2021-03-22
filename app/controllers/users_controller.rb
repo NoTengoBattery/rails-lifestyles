@@ -1,9 +1,11 @@
 class UsersController < ApplicationController
-  before_action :sign_in!, only: [:edit, :show, :update, :destroy]
+  before_action :sign_in!, except: [:sign_up, :new_user, :sign_in, :new_session, :sign_out]
   before_action :empty_user
-  before_action :session_user_destroy, only: [:sign_in, :sign_out, :sign_up]
   before_action :user_from_params, only: [:destroy, :edit, :show]
+  before_action :session_user_destroy, only: [:sign_in, :sign_out, :sign_up]
   after_action :session_update_user, only: [:new_user, :new_session]
+
+  before_action :authorize!, only: [:edit, :update, :destroy]
 
   def new_user
     @user = User.new(user_params)

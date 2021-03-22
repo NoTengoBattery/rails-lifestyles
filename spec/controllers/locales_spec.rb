@@ -1,4 +1,5 @@
 require "rails_helper"
+require "shared_rutines"
 
 RSpec.describe LocalesController, type: :controller do
   describe "#default_locale" do

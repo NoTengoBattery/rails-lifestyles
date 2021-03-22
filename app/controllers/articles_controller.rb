@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   before_action :empty_article
-  before_action :article_from_params, only: [:edit, :show, :update]
+  before_action :article_from_params, except: [:create, :new]
+
+  before_action :authorize!, only: [:edit, :update, :destroy]
 
   def create
     @article = current_user.articles.build(article_params)
@@ -23,10 +25,15 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def destroy
+    @article.destroy
+    redirect_to root_path, notice: I18n.t("article.notice.destroy")
+  end
+
   private
     def article_from_params
       @article = Article.find(params.require(:id))
-      @author = User.find(@article.AuthorId)
+      @author = @user = User.find(@article.AuthorId)
     end
 
     def article_params

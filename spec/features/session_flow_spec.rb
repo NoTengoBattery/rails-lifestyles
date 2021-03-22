@@ -1,3 +1,6 @@
+require "rails_helper"
+require "shared_rutines"
+
 RSpec.describe "UserSession", type: :system do
   def sing_and_test(params = {})
     fill_in I18n.t("user.user_name"), with: params[:name]

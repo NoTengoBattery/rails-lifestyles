@@ -1,4 +1,5 @@
 require "rails_helper"
+require "shared_rutines"
 
 RSpec.describe Vote, type: :model do
   context "validations" do

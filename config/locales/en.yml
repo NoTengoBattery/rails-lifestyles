@@ -2,10 +2,11 @@ en:
   close:                "Close"
   home:                 "Home"
   name:                 "Lifestyle"
-  sure:                 "Are you sure? This action can not be undone!"
+  sure:                 "Are you sure? Once commited, this action can not be undone!"
 
   pluralize:
     error_saved:
+      one:              "one error prohibited this %{thing} from being saved."
       other:            "%{count} errors prohibited this %{thing} from being saved."
 
   date:
@@ -21,6 +22,7 @@ en:
       edit:             "This article could not be edited."
     notice:
       create:           "Take a look at that wonderful new article!"
+      destroy:          "The article have been desroyed!"
       edit:             "Article updated successfully!"
     by:                 "By"
     categories:         "Categories"
@@ -29,9 +31,11 @@ en:
     modify:             "Modify article"
     select_category:    "Select one or more categories"
     select_instuctions: "Select one or several categories by holding the Control and/or Shift keys while clicking"
-    text:               "Article's contents"
+    text:               "Article's content"
     title:              "Title"
     write:              "Write an article"
+  category:
+    no_articles:        "This category have no articles yet"
   nav:
     toggle:             "Toggle navigation bar"
   user:
@@ -41,16 +45,19 @@ en:
       need_sign_in:     "You need to sign in before continuing..."
       sign_in:          "Sign in failed."
       sign_up:          "Sign up failed."
+      unauthorized:     "You are not authorized to perform this action..."
     notice:
-      destroy:          "The user and all asociated records have been desroyed."
+      destroy:          "The user and all asociated records have been desroyed!"
       edit:             "User details edited!"
-      sign_in:          "Signed in!"
-      sign_out:         "Signed out!"
-      sign_up:          "Signed up!"
+      sign_in:          "Welcome back!"
+      sign_out:         "Successfully signed out!"
+      sign_up:          "Welcome to this website! We hope you enjoy being here :3"
+    already:            "Already a member? Click here!"
     edit:               "Edit"
     edit_profile:       "Edit user details"
     my_voted_articles:  "My most voted articles"
     no_articles:        "You have not written any article"
+    not_yet:            "Not yet a member? Click here!"
     sign_in:            "Sign in"
     sign_out:           "Sign out"
     sign_up:            "Sign up"

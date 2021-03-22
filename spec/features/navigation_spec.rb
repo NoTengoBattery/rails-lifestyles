@@ -1,3 +1,6 @@
+require "rails_helper"
+require "shared_rutines"
+
 RSpec.describe "Navigation", type: :system do
   describe "link" do
     include_examples "build valid article with vote"
@@ -6,13 +9,6 @@ RSpec.describe "Navigation", type: :system do
       visit root_path
     end
 
-    def sign_up_rutine
-      user = FactoryBot.build(:user)
-      visit sign_up_path
-      fill_in I18n.t("user.user_name"), with: user.Name
-      click_button I18n.t("user.sign_up")
-      User.find_by(Name: user.Name)
-    end
     def find_and_test_link(selector, text, href)
       link = find(selector)
       expect(link.text).to eq(text)

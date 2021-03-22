@@ -41,10 +41,11 @@ module ApplicationSession
 
     def session_user_destroy
       cookies.delete(:session_user)
+      @_user = nil
     end
 
     def current_user
-      session_user ? User.find(session_user) : nil
+      session_user ? (@_user ||= User.find(session_user)) : nil
     rescue ActiveRecord::RecordNotFound # Protect against malicious crafted User IDs
       session_user_destroy
       nil
@@ -59,17 +60,20 @@ module ApplicationSession
     end
 
     def backpath
-      cookie = cookies[:backpath]
       cookies.delete(:backpath)
-      cookie
     end
 
     def sign_in!
-      if signed_in?
-        true
-      else
+      unless signed_in?
         backpath_set
         redirect_to sign_in_path, alert: I18n.t("user.alert.need_sign_in")
+      end
+      true
+    end
+
+    def authorize!
+      unless current_user.id == @user.id and @user.class == User
+        redirect_back fallback_location: root_path, alert: I18n.t("user.alert.unauthorized")
       end
     end
 end
@@ -78,8 +82,8 @@ class ApplicationController < ActionController::Base
   include LocaleSession
   include ApplicationSession
 
-  before_action :sign_in!
   before_action :configure_locale
+  before_action :sign_in!
 
   helper_method :current_user
   helper_method :signed_in?

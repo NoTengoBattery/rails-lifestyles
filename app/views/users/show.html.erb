@@ -8,10 +8,6 @@
       <span class="iconify" data-icon="ri:edit-2-fill" data-inline="false"></span>
       <%= link_to t("user.edit_profile"), edit_user_path(@user) %>
     </small>
-    <small id="delete-link">
-      <span class="iconify" data-icon="ri:delete-bin-fill" data-inline="false"></span>
-      <%= link_to t("user.delete_profile"), user_path(@user), method: :delete, data: { confirm: t("sure") } %>
-    </small>
   </div>
   <span id="votes" class="col-12">
     <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
