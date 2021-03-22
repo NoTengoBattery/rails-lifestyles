@@ -17,6 +17,7 @@ module VotesHelper
       params[:method] = :post
     end
     content_tag(:span, "", class: :iconify, "data-icon": "ri:thumb-#{thumb}-line", "data-inline": false) +
+    "\n" +
     link_to(label, path, params)
   end
 end

@@ -1,33 +1,48 @@
 <div class="row">
-  <h1 class="col-12"><%= @article.Title %></h1>
-  <small id="author" class="col-9">
-    <%= t("article.by") %>
-    <%= link_to @author.Name, @author %>
-  </small>
-  <small id="votes" class="col-3 text-right">
-    <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
-    <%= @article.votes.size %>
-  </small>
-  <small id="edit-link">
-    <span class="iconify" data-icon="ri:edit-2-fill" data-inline="false"></span>
-    <%= link_to t("article.edit"), edit_article_path(@article) %>
-  </small>
-  <small id="date" class="col-12">
-    <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
-    On <%= l(@article.CreatedAt) %>
-  </small>
-  <%= image_tag(img_large, id: "article-cover", class: "col-12 mt-2 img-fluid article-cover", alt: @article.Title) %>
-  <small id="categories" class="col-12">
+  <div class="col-12">
+    <h1><%= @article.Title %></h1>
+  </div>
+  <div class="col-9">
+    <span>
+      <%= t("article.by") %>
+      <%= link_to @author.Name, @author %>
+    </span>
+  </div>
+  <div class="col-3 text-right">
+    <span>
+      <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+      <%= @article.votes.size %>
+    </span>
+  </div>
+  <div class="col-9">
+    <span>
+      <span class="iconify" data-icon="ri:edit-2-fill" data-inline="false"></span>
+      <%= link_to t("article.edit"), edit_article_path(@article) %>
+    </span>
+  </div>
+  <div class="col-3 text-right">
+    <% if can_vote? %>
+      <span>
+        <%= vote_button %>
+      </span>
+    <% end %>
+  </div>
+  <div class="col-12">
+    <span>
+      <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
+      On
+      <%= l(@article.CreatedAt) %>
+    </span>
+  </div>
+  <%= image_tag(img_large, class: "col-12 mt-2 img-fluid article-cover", alt: @article.Title) %>
+  <div class="col-12">
     <span class="iconify" data-icon="ri:list-unordered" data-inline="false"></span>
     Categories:
     <% @article.categories.each do |category| %>
-      <%= link_to category.Name, category %>
+      <%= link_to category.Name, category, class: "badge badge-primary" %>
     <% end %>
-  </small>
-  <% if can_vote? %>
-    <%= vote_button %>
-  <% end %>
-  <div id="text" class="col-12 mt-2 text-break">
-    <%= @article.Text %>
+  </div>
+  <div class="col-12 mt-2">
+    <div class="multiline-text"><%= @article.Text %></div>
   </div>
 </div>

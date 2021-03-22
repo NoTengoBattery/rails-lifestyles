@@ -1,8 +1,8 @@
 <h1><%= t("article.modify") %></h1>
-<small id="delete-link">
-  <span class="iconify" data-icon="ri:delete-bin-fill" data-inline="false"></span>
-  <%= link_to t("article.delete"), article_path(@article), method: :delete, data: { confirm: t("sure") } %>
-</small>
 <%= form_with model: @article, url: article_path(@article), method: :patch do |form| %>
-  <%= render "form", model: @article, form: form, button: "article.modify" %>
+<%= render "form", model: @article, form: form, button: "article.modify" %>
 <% end %>
+<small id="delete-link">
+<span class="iconify" data-icon="ri:delete-bin-fill" data-inline="false"></span>
+<%= link_to t("article.delete"), article_path(@article), method: :delete, data: { confirm: t("sure") } %>
+</small>
