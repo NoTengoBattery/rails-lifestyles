@@ -1,4 +1,5 @@
 require "rails_helper"
+require "shared_rutines"
 
 RSpec.describe Category, type: :model do
   context "validations" do

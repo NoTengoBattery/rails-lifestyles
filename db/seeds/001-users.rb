@@ -2,7 +2,7 @@ new_records = 100
 records = 0
 invalid = 0
 
-until records >= new_records  do
+until records >= new_records do
   begin
     user = FactoryBot.create(:user)
     records += 1

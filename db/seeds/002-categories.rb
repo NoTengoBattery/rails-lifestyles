@@ -2,7 +2,7 @@ new_records = 20
 records = 0
 invalid = 0
 
-until records >= new_records  do
+until records >= new_records do
   begin
     category = FactoryBot.create(:category)
     records += 1

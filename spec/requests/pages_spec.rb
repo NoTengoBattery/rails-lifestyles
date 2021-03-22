@@ -1,4 +1,5 @@
 require "rails_helper"
+require "shared_rutines"
 
 RSpec.describe "Pages", type: :request do
   describe "GET /home" do

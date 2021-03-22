@@ -6,6 +6,7 @@ module UsersHelper
       link_to I18n.t("user.sign_up"), sign_up_path, params
     end
   end
+
   def sign_in_or_out(params = {})
     if signed_in?
       params[:method] = :delete
@@ -13,5 +14,9 @@ module UsersHelper
     else
       link_to I18n.t("user.sign_in"), sign_in_path, params
     end
+  end
+
+  def authorized?
+    current_user.id == @user.id and @user.class == User
   end
 end

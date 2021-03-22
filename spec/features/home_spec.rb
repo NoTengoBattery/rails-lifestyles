@@ -1,3 +1,6 @@
+require "rails_helper"
+require "shared_rutines"
+
 RSpec.describe "Home", type: :system do
   describe "page" do
     include_examples "build valid article with vote"

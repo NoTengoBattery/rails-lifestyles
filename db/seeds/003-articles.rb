@@ -2,7 +2,7 @@ new_records = 250
 records = 0
 invalid = 0
 
-until records >= new_records  do
+until records >= new_records do
   begin
     article = FactoryBot.build(:article)
     user_id = User.order(Arel.sql("RANDOM()")).first.id

@@ -8,6 +8,10 @@
     <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
     <%= @article.votes.size %>
   </small>
+  <small id="edit-link">
+    <span class="iconify" data-icon="ri:edit-2-fill" data-inline="false"></span>
+    <%= link_to t("article.edit"), edit_article_path(@article) %>
+  </small>
   <small id="date" class="col-12">
     <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
     On <%= l(@article.CreatedAt) %>
