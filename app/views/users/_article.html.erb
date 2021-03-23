@@ -1,14 +1,12 @@
-<div class="list-group">
-  <% articles.each do |article| %>
-    <%= link_to article_path(article), id: "a-#{id}-#{article.id}", class: "list-group-item list-group-item-action" do %>
-      <%= image_tag(img_medium(article), id: "img-#{id}-#{article.id}", class: "img-fluid thumb-article", alt: article.Title) %>
-      <div id="<%= "div-#{id}-#{article.id}" %>" class="d-flex w-100 justify-content-between">
-        <h5 id="<%= "h5-#{id}-#{article.id}" %>" class="pr-5 text-truncate"><%= article.Title %></h5>
-        <span id="<%= "votes-#{id}-#{article.id}" %>" class="text-nowrap">
-          <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
-          <%= article.votes.size %>
-        </span>
-      </div>
-    <% end %>
-  <% end %>
-</div>
+<% articles.each do |article| %>
+  <article class="d-flex flex-column position-relative">
+    <%= image_tag img_large(article), class: "w-100 article-cover-slim", alt: article.Title %>
+    <div class="d-flex justify-content-between text-white abs-bottom p-3 tint-bottom"">
+      <%= link_to article.Title, article_path(article), class: "h6 text-truncate d-block text-white" %>
+      <span class="text-nowrap ml-2">
+        <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+        <%= article.votes.size %>
+      </span>
+    </div>
+  </article>
+<% end %>

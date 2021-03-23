@@ -1,8 +1,18 @@
-.article-cover {
-  height: 50vh;
-  min-height: 240px;
+%fit-100 {
   object-fit: cover;
   width: 100%;
+}
+
+%article-cover, .article-cover {
+  @extend %fit-100;
+  height: 50vh;
+  min-height: 240px;
+
+  &-slim {
+    @extend %article-cover;
+    height: 20vh;
+    min-height: 128px;
+  }
 }
 
 .multiline-text {

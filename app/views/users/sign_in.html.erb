@@ -1,4 +1,10 @@
-<h1><%= t("user.sign_in") %></h1>
-<%= form_with model: @user, url: sign_in_path do |form| %>
-  <%= render "form", model: @user, form: form, button: "user.sign_in", link_text: "user.not_yet", link_path: sign_up_path %>
-<% end %>
+<div class="row flex-column">
+  <div class="col-6 mx-auto">
+    <h1><%= t("user.sign_in") %></h1>
+  </div>
+  <div class="col-6 mx-auto">
+    <%= form_with model: @user, url: sign_in_path do |form| %>
+      <%= render "form", model: @user, form: form, button: "user.sign_in", link_text: "user.not_yet", link_path: sign_up_path %>
+    <% end %>
+  </div>
+</div>
