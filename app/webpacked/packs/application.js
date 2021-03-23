@@ -14,3 +14,8 @@ import "bootstrap";
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// This listener is needed to reload the icons after Turbolinks replaces the DOM
+document.addEventListener("turbolinks:load", function() {
+  Iconify.scanDOM();
+})

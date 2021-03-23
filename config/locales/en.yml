@@ -1,65 +1,63 @@
+---
 en:
-  close:                "Close"
-  home:                 "Home"
-  name:                 "NoTengoStyle"
-  sure:                 "Are you sure about that? If you confirm, nobody can save you later!"
-
-  pluralize:
-    error_saved:
-      one:              "Whoops, there is one error over there and the %{thing} can not be saved."
-      other:            "Whoops, there are %{count} errors over there and the %{thing} can not be saved."
-
+  article:
+    alert:
+      create: Boo boo! This article could not be created.
+      edit: Boo boo! This article could not be edited.
+    article: Article
+    by: By
+    categories: Categories
+    delete: Delete article
+    edit: Edit article
+    image: Image
+    notice:
+      create: Ooh la la! Such magnifique creation.
+      destroy: Say goodbye to your masterpiece!
+      edit: "What was that? A mistake? \U0001F914 We are glad it's fixed now!"
+    'on': 'On'
+    select_instuctions: Select one or more categories by holding the Control and/or
+      Shift keys while clicking
+    text: Article's content
+    title: Title
+    write: Write something...
+  category:
+    no_articles: "Nothing to see here... yet \U0001F609"
+  close: Close
   errors:
     messages:
-      format:           "must be one of the following formats: %{formats}"
-      oversize:         "must be less than %{size}"
-
-  article:
-    article:            "Article"
-    alert:
-      create:           "Boo boo! This article could not be created."
-      edit:             "Boo boo! This article could not be edited."
-    notice:
-      create:           "Ooh la la! Such magnifique creation."
-      destroy:          "Say goodbye to your masterpiece!"
-      edit:             "What was that? A mistake? 🤔 We are glad it's fixed now!"
-    by:                 "By"
-    categories:         "Categories"
-    edit:               "Edit article"
-    image:              "Image"
-    "on":               "On"
-    select_category:    "Select one or more categories"
-    select_instuctions: "Select one or more categories by holding the Control and/or Shift keys while clicking"
-    text:               "Article's content"
-    title:              "Title"
-    write:              "Write something..."
-  category:
-    no_articles:        "Nothing to see here... yet 😉"
+      format: 'must be one of the following formats: %{formats}'
+      oversize: must be less than %{size}
+  home: Home
+  name: NoTengoStyle
   nav:
-    toggle:             "Toggle navigation bar"
+    toggle: Toggle navigation bar
+  pluralize:
+    error_saved:
+      one: Whoops, there is one error over there and the %{thing} can not be saved.
+      other: Whoops, there are %{count} errors over there and the %{thing} can not
+        be saved.
+  sure: Are you sure about that? If you confirm, nobody can save you later!
   user:
-    user:               "User"
     alert:
-      edit:             "Shame on us! We could not edit the user's details."
-      need_sign_in:     "You'll need to sign in before doing that..."
-      sign_in:          "Sign in failed successfully."
-      sign_up:          "Sign up failed successfully."
-      unauthorized:     "Nope, you can't do that..."
+      edit: Shame on us! We could not edit the user's details.
+      need_sign_in: You'll need to sign in before doing that...
+      sign_in: Sign in failed successfully.
+      sign_up: Sign up failed successfully.
+      unauthorized: Nope, you can't do that...
+    delete_profile: Delete profile
+    edit_profile: Edit user details
+    my_voted_articles: My most cool articles
+    no_articles: Nothing to see here... but you can change that.
     notice:
-      destroy:          "The user and all asociated records have been desroyed!"
-      edit:             "User details edited!"
-      sign_in:          "Welcome back!"
-      sign_out:         "Successfully signed out!"
-      sign_up:          "Welcome to our website! We hope you enjoy being here :3"
-    already:            "Already a member? Click here!"
-    edit:               "Edit"
-    edit_profile:       "Edit user details"
-    my_voted_articles:  "My most cool articles"
-    no_articles:        "Nothing to see here... but you can change that."
-    not_yet:            "Not yet a member? Click here!"
-    sign_in:            "Sign in"
-    sign_out:           "Sign out"
-    sign_up:            "Sign up"
-    total_voted:        "Total voted articles"
-    total_written:      "Total written articles"
-    user_name:          "User name"
+      destroy: The user and all asociated records have been desroyed!
+      edit: User details edited!
+      sign_in: Welcome back!
+      sign_out: Successfully signed out!
+      sign_up: Welcome to our website! We hope you enjoy being here :3
+    sign_in: Sign in
+    sign_out: Sign out
+    sign_up: Sign up
+    total_voted: Total voted articles
+    total_written: Total written articles
+    user: User
+    user_name: User name
