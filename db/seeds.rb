@@ -8,7 +8,8 @@
 
 Rake::Task["db:reset"].invoke
 
-Dir[Rails.root.join("db/seeds/*.rb")].sort.each do |file|
+Rails.env.production? ? (seeds="production") : (seeds="devel")
+Dir[Rails.root.join("db/seeds-#{seeds}/*.rb")].sort.each do |file|
   puts "Processing #{file.split('/').last}"
   require file
 end

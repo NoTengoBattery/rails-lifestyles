@@ -19,12 +19,11 @@ gem "jbuilder", "~> 2.11", ">= 2.11.2"
 # gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 
 # Extra gems required for this project
-gem "devise", "~> 4.7", ">= 4.7.3"
-gem "devise-i18n", "~> 1.9", ">= 1.9.2"
 gem "image_processing", "~> 1.12", ">= 1.12.1"
 gem "mina", "~> 1.2", ">= 1.2.3"
 gem "mina-ng-puma", git: "https://github.com/NoTengoBattery/mina-ng-puma.git"
 gem "http-accept", "~> 2.1", ">= 2.1.1"
+gem "rails-i18n", "~> 6.0"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", "~> 1.7", ">= 1.7.2", require: false

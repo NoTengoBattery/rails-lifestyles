@@ -1,4 +1,8 @@
-<%= render "featured", article: @featured, id: "featured" if @featured %>
-<div>
-  <%= render "category", categories: @categories, id: "category" unless @categories.empty? %>
+<div class="row">
+  <div class="col-12">
+    <%= render "featured", article: @featured, id: "featured" if @featured %>
+  </div>
+  <main class="col-12 row m-0">
+    <%= render "category", categories: @categories, id: "category" unless @categories.empty? %>
+  </main>
 </div>

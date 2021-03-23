@@ -20,15 +20,18 @@ class Article < ApplicationRecord
   validate :acceptable_image
 
   def acceptable_image
-    return unless image.attached?
+    unless image.attached?
+      errors.add(:image, I18n.t("errors.messages.blank"))
+      return
+    end
 
     unless image.byte_size <= 5.megabyte
-      errors.add(:image, "is too big, must be less than 5 megabytes")
+      errors.add(:image, I18n.t("errors.messages.oversize", size: "5 MB"))
     end
 
     acceptable_types = ["image/jpeg", "image/png", "image/tiff"]
     unless acceptable_types.include?(image.content_type)
-      errors.add(:image, "must be a JPEG, PNG or TIFF")
+      errors.add(:image, I18n.t("errors.messages.format", formats: "JPG, PNG, TIFF"))
     end
   end
 end

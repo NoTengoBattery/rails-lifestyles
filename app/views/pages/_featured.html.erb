@@ -1,8 +1,9 @@
-<div id="<%= "div-#{id}" %>">
-  <figure id="<%= "figure-#{id}" %>" class="figure">
-    <%= image_tag(img_large(article), id: "img-#{id}", class: "figure-img img-fluid rounded", alt: article.Title) %>
-    <figcaption id="<%= "figcaption-#{id}" %>" class="figure-caption">
-      <%= link_to article.Title, article_path(article) %>
+<aside id="<%= "#{id}" %>">
+  <figure class="position-relative m-0">
+    <%= image_tag img_large(article), alt: article.Title, class: "article-cover" %>
+    <figcaption class="abs-bottom p-4 tint-bottom">
+      <%= link_to article.Title, article_path(article), class: "h5 font-weight-bold" %>
+      <p class="multiline-text text-truncate sneak-peak"><%= article.Text %></p>
     </figcaption>
   </figure>
-</div>
+</aside>

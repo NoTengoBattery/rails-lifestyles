@@ -1,11 +1,17 @@
 <% categories.each do |category| %>
-  <div id="<%= "div-#{id}-#{category.id}" %>">
-    <p><%= link_to category.Name, category_path(category) %></p>
-    <figure id="<%= "figure-#{id}-#{category.id}" %>" class="figure">
-      <%= image_tag(img_medium(recent_article(category)), id: "img-#{id}-#{category.id}", class: "figure-img img-fluid rounded", alt: category.Name) %>
-      <figcaption id="<%= "figcaption-#{id}-#{category.id}" %>" class="figure-caption">
-        <%= link_to recent_article(category).Title, article_path(recent_article(category)) %>
-      </figcaption>
-    </figure>
-  </div>
+  <% unless category.articles.empty? %>
+    <article id="<%= "#{id}-#{category.id}" %>" class="col-3 position-relative p-0">
+      <p class="abs-top bring-top p-3 tint-top">
+        <%= link_to category.Name, category_path(category), class: "h5 text-truncate d-block text-white" %>
+      </p>
+      <figure class="position-relative m-0">
+        <div class="r-1-1">
+          <%= image_tag(img_medium(recent_article(category)), class: "abs-0 w-100 h-100", alt: category.Name) %>
+        </div>
+        <figcaption class="abs-bottom p-3 tint-bottom">
+          <%= link_to recent_article(category).Title, article_path(recent_article(category)), class: "h6 text-truncate d-block text-white" %>
+        </figcaption>
+      </figure>
+    </article>
+  <% end %>
 <% end %>

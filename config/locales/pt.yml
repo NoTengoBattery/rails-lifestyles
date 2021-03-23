@@ -1,0 +1,65 @@
+pt:
+  close:                "Fechar"
+  home:                 "Home"
+  name:                 "Lifestyle"
+  sure:                 "Tem certeza? Se prosseguir, esta ação não poderá ser desfeita!"
+
+  pluralize:
+    error_saved:
+      one:              "Um erro impediu %{thing} de ser salvo."
+      other:            "%{count} erros impediram %{thing} de ser salvo."
+
+  errors:
+    messages:
+      format:           "deve ter um dos seguintes formatos: %{formats}"
+      oversize:         "deve ter menos de %{size}"
+
+  article:
+    article:            "Artigo"
+    alert:
+      create:           "Oops... Não deu pra cirar esse artigo."
+      edit:             "Oops... Não deu pra editar esse artigo."
+    notice:
+      create:           "Wohoo olha esse artigo!"
+      destroy:          "Artigo deletado!"
+      edit:             "Artigo Atualizado com sucesso!"
+    by:                 "Por"
+    categories:         "Categorias"
+    edit:               "Editar artigo"
+    image:              "Imagem"
+    "on":               "Em"
+    select_category:    "Selecione uma ou + categorias"
+    select_instuctions: "Selecione uma ou + categorias pressionando a tecla Control e/ou Shift enquanto clica"
+    text:               "Conteúdo do artigo"
+    title:              "Título"
+    write:              "Escrever algo"
+  category:
+    no_articles:        "Nada por aqui ainda..."
+  nav:
+    toggle:             "Mostrar/Esconder a barra de navegação"
+  user:
+    user:               "Usuário"
+    alert:
+      edit:             "Vish... falha ao editar detalhes do usuário"
+      need_sign_in:     "Você precisa entrar antes de continuar..."
+      sign_in:          "O login deu ruim."
+      sign_up:          "O cadastro deu ruim."
+      unauthorized:     "Você não pode fazer isso..."
+    notice:
+      destroy:          "O usuário e todos seus artigos serão apagados!"
+      edit:             "Informações atualizadas!"
+      sign_in:          "Bem-vindo de volta!"
+      sign_out:         "Log out com sucesso"
+      sign_up:          "Bem-vindo ao nosso site! Esperamos que você o curta :3"
+    already:            "Já é um membro? Clique aqui!"
+    edit:               "Editar"
+    edit_profile:       "Editar detalhes do usuário"
+    my_voted_articles:  "Seus artigos que estão bombando"
+    no_articles:        "Nada por aqui ainda... escreva um artigo!"
+    not_yet:            "Não é um membro? Clique aqui e junte-se a nós!"
+    sign_in:            "Entrar"
+    sign_out:           "Sair"
+    sign_up:            "Criar conta"
+    total_voted:        "Total de artigos criados"
+    total_written:      "Total de artigos escritos"
+    user_name:          "Apelido"

@@ -1,4 +1,28 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+.r-1-1 {
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+}
+
+%abs-0, .abs-0 {
+  bottom: 0;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.abs-bottom {
+  @extend %abs-0;
+  top: unset;
+}
+
+.abs-top {
+  @extend %abs-0;
+  bottom: unset;
+}
+
+.bring-top {
+  z-index: 1;
+}

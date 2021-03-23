@@ -1,62 +1,61 @@
 en:
   close:                "Close"
   home:                 "Home"
-  name:                 "Lifestyle"
-  sure:                 "Are you sure? Once commited, this action can not be undone!"
+  name:                 "NoTengoStyle"
+  sure:                 "Are you sure about that? If you confirm, nobody can save you later!"
 
   pluralize:
     error_saved:
-      one:              "One error prohibited this %{thing} from being saved."
-      other:            "%{count} errors prohibited this %{thing} from being saved."
+      one:              "Whoops, there is one error over there and the %{thing} can not be saved."
+      other:            "Whoops, there are %{count} errors over there and the %{thing} can not be saved."
 
-  date:
-    formats:
-      default:          "%B %d, %Y"
-      short:            "%b %d"
-      long:             "%B %d, %Y"
+  errors:
+    messages:
+      format:           "must be one of the following formats: %{formats}"
+      oversize:         "must be less than %{size}"
 
   article:
     article:            "Article"
     alert:
-      create:           "This article could not be created."
-      edit:             "This article could not be edited."
+      create:           "Boo boo! This article could not be created."
+      edit:             "Boo boo! This article could not be edited."
     notice:
-      create:           "Take a look at that wonderful new article!"
-      destroy:          "The article have been desroyed!"
-      edit:             "Article updated successfully!"
+      create:           "Ooh la la! Such magnifique creation."
+      destroy:          "Say goodbye to your masterpiece!"
+      edit:             "What was that? A mistake? 🤔 We are glad it's fixed now!"
     by:                 "By"
     categories:         "Categories"
-    create:             "Create article"
+    edit:               "Edit article"
     image:              "Image"
-    modify:             "Modify article"
+    "on":               "On"
     select_category:    "Select one or more categories"
-    select_instuctions: "Select one or several categories by holding the Control and/or Shift keys while clicking"
+    select_instuctions: "Select one or more categories by holding the Control and/or Shift keys while clicking"
     text:               "Article's content"
     title:              "Title"
-    write:              "Write an article"
+    write:              "Write something..."
   category:
-    no_articles:        "This category have no articles yet"
+    no_articles:        "Nothing to see here... yet 😉"
   nav:
     toggle:             "Toggle navigation bar"
   user:
     user:               "User"
     alert:
-      edit:             "Edit user details failed."
-      need_sign_in:     "You need to sign in before continuing..."
-      sign_in:          "Sign in failed."
-      sign_up:          "Sign up failed."
-      unauthorized:     "You are not authorized to perform this action..."
+      edit:             "Shame on us! We could not edit the user's details."
+      need_sign_in:     "You'll need to sign in before doing that..."
+      sign_in:          "Sign in failed successfully."
+      sign_up:          "Sign up failed successfully."
+      unauthorized:     "Nope, you can't do that..."
     notice:
       destroy:          "The user and all asociated records have been desroyed!"
       edit:             "User details edited!"
       sign_in:          "Welcome back!"
       sign_out:         "Successfully signed out!"
-      sign_up:          "Welcome to this website! We hope you enjoy being here :3"
+      sign_up:          "Welcome to our website! We hope you enjoy being here :3"
     already:            "Already a member? Click here!"
     edit:               "Edit"
     edit_profile:       "Edit user details"
-    my_voted_articles:  "My most voted articles"
-    no_articles:        "You have not written any article"
+    my_voted_articles:  "My most cool articles"
+    no_articles:        "Nothing to see here... but you can change that."
     not_yet:            "Not yet a member? Click here!"
     sign_in:            "Sign in"
     sign_out:           "Sign out"
