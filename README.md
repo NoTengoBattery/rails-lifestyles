@@ -39,8 +39,8 @@ Once Ruby is installed, get a copy of this project by:
 - Cloning the repository using `git`
   * `git clone git@github.com:NoTengoBattery/rails-lifestyles.git`
 - Downloading a zip with the source code
-  * Click [here](https://github.com/NoTengoBattery/rails-lifestyles/archive/master.zip) to download a copy of the stable branch
-  * Click [here](https://github.com/NoTengoBattery/rails-lifestyles/archive/develop.zip) to download a copy of the development branch
+  * Click [here](https://github.com/NoTengoBattery/rails-lifestyles/archive/refs/heads/main.zip) to download a copy of the stable branch
+  * Click [here](https://github.com/NoTengoBattery/rails-lifestyles/archive/refs/heads/development.zip) to download a copy of the development branch
   * Once  downloaded, extract it in a place with easy access to a terminal
 
 Once Ruby is installed, and you have a copy of the source code, open the terminal and navigate to the folder where the code is:
