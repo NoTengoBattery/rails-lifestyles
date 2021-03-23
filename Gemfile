@@ -23,7 +23,7 @@ gem "image_processing", "~> 1.12", ">= 1.12.1"
 gem "mina", "~> 1.2", ">= 1.2.3"
 gem "mina-ng-puma", git: "https://github.com/NoTengoBattery/mina-ng-puma.git"
 gem "http-accept", "~> 2.1", ">= 2.1.1"
-gem 'rails-i18n', '~> 6.0'
+gem "rails-i18n", "~> 6.0"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", "~> 1.7", ">= 1.7.2", require: false

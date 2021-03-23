@@ -3,6 +3,6 @@ class PagesController < ApplicationController
 
   def home
     @featured = Article.featured.class == Article ? Article.featured : Article.featured.first
-    @categories = Category.top_categories
+    @categories = Category.includes(:articles).top_categories
   end
 end
