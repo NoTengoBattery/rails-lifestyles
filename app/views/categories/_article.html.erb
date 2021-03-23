@@ -1,14 +1,24 @@
-<div class="list-group">
+<main class="row">
   <% articles.each do |article| %>
-    <%= link_to article_path(article), id: "a-#{id}-#{article.id}", class: "list-group-item list-group-item-action" do %>
-      <%= image_tag(img_medium(article), id: "img-#{id}-#{article.id}", class: "img-fluid thumb-article", alt: article.Title) %>
-      <div id="<%= "div-#{id}-#{article.id}" %>" class="d-flex w-100 justify-content-between">
-        <h5 id="<%= "h5-#{id}-#{article.id}" %>" class="pr-5 text-truncate"><%= article.Title %></h5>
-        <span id="<%= "votes-#{id}-#{article.id}" %>" class="text-nowrap">
-          <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
-          <%= article.votes.size %>
-        </span>
+    <article class="col-3 p-0 d-flex flex-column">
+      <div class="r-1-1<%= toggle_order %>">
+        <%= image_tag(img_medium(article), class: "abs-0 w-100 h-100", alt: article.Title) %>
       </div>
-    <% end %>
+      <div class="r-1-1">
+        <div class="abs-0 w-100 h-100 d-flex flex-column p-3 bg-light">
+          <u class="h5 text-underline text-primary"><%= category.Name %></u>
+          <%= link_to article.Title, article_path(article), class: "h5 text-secondary" %>
+          <p class="multiline-text text-truncate"><%= article.Text %></p>
+          <span>
+            <%= t("article.by") %>
+            <%= link_to article.user.Name, article.user %>
+          </span>
+          <span>
+            <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+            <%= article.votes.size %>
+          </span>
+        </div>
+      </div>
+    </article>
   <% end %>
-</div>
+</main>

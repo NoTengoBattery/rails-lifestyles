@@ -1,8 +1,15 @@
-<% if @articles.size >= 1 %>
-  <%= render "article", articles: @articles, id: "article" %>
-<% else %>
-  <p>
-    <span class="iconify" data-icon="ri:error-warning-fill" data-inline="false"></span>
-    <%= t("category.no_articles") %>
-  </p>
-<% end %>
+<div class="row">
+  <div class="col-12">
+    <h1><%= @category.Name %></h1>
+  </div>
+  <div class="col-12">
+    <% if @articles.size >= 1 %>
+      <%= render "article", category: @category, articles: @articles, id: "article" %>
+    <% else %>
+      <p>
+        <span class="iconify" data-icon="ri:error-warning-fill" data-inline="false"></span>
+        <%= t("category.no_articles") %>
+      </p>
+    <% end %>
+  </div>
+</div>

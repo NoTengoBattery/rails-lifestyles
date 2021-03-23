@@ -3,13 +3,13 @@
     <h1><%= @article.Title %></h1>
   </div>
   <div class="col-9">
-    <span>
+    <span id="author">
       <%= t("article.by") %>
       <%= link_to @author.Name, @author %>
     </span>
   </div>
   <div class="col-3 text-right">
-    <span>
+    <span id="votes">
       <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
       <%= @article.votes.size %>
     </span>
@@ -28,9 +28,9 @@
     <% end %>
   </div>
   <div class="col-12">
-    <span>
+    <span id="date">
       <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
-      On
+      <%= t("article.on") %>
       <%= l(@article.CreatedAt) %>
     </span>
   </div>
@@ -43,6 +43,6 @@
     <% end %>
   </div>
   <div class="col-12 mt-2">
-    <div class="multiline-text"><%= @article.Text %></div>
+    <div id="text" class="multiline-text"><%= @article.Text %></div>
   </div>
 </div>

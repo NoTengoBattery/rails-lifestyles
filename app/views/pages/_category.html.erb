@@ -1,11 +1,13 @@
 <% categories.each do |category| %>
-  <div id="<%= "div-#{id}-#{category.id}" %>">
-    <p><%= link_to category.Name, category_path(category) %></p>
-    <figure id="<%= "figure-#{id}-#{category.id}" %>" class="figure">
-      <%= image_tag(img_medium(recent_article(category)), id: "img-#{id}-#{category.id}", class: "figure-img img-fluid rounded", alt: category.Name) %>
-      <figcaption id="<%= "figcaption-#{id}-#{category.id}" %>" class="figure-caption">
-        <%= link_to recent_article(category).Title, article_path(recent_article(category)) %>
-      </figcaption>
-    </figure>
-  </div>
+  <% unless category.articles.empty? %>
+    <div id="<%= "div-#{id}-#{category.id}" %>">
+      <p><%= link_to category.Name, category_path(category) %></p>
+      <figure id="<%= "figure-#{id}-#{category.id}" %>" class="figure">
+        <%= image_tag(img_medium(recent_article(category)), id: "img-#{id}-#{category.id}", class: "figure-img img-fluid rounded", alt: category.Name) %>
+        <figcaption id="<%= "figcaption-#{id}-#{category.id}" %>" class="figure-caption">
+          <%= link_to recent_article(category).Title, article_path(recent_article(category)) %>
+        </figcaption>
+      </figure>
+    </div>
+  <% end %>
 <% end %>

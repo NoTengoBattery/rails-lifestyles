@@ -6,17 +6,17 @@ module VotesHelper
   def vote_button(params = {})
     vote = @article.votes.find_by(user: current_user)
     if vote
-      thumb = "down"
+      thumb = "subtract"
       label = "-1"
       path = vote_path(vote)
       params[:method] = :delete
     else
-      thumb = "up"
+      thumb = "add"
       label = "+1"
       path = votes_path(vote: { ArticleId: @article.id })
       params[:method] = :post
     end
-    content_tag(:span, "", class: :iconify, "data-icon": "ri:thumb-#{thumb}-line", "data-inline": false) +
+    content_tag(:span, "", class: :iconify, "data-icon": "ri-#{thumb}-fill", "data-inline": false) +
     "\n" +
     link_to(label, path, params)
   end
