@@ -10,16 +10,18 @@ require "mina/puma"
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :application_name, "website"
-set :domain, "website.com"
-set :deploy_to, "/www/sites/website"
-set :repository, "git@git.com:User/website.git"
+set :application_name, "lifestyle-demo"
+set :domain, "notengobattery.com"
+set :deploy_to, "/www/sockets/rails/lifestyle-demo"
+set :repository, "git@github.com:NoTengoBattery/rails-lifestyles.git"
 set :branch, "main"
 
 # Optional settings:
 #   set :user, "rails" # Username in the server to SSH to.
 #   set :port, '30000'           # SSH port number.
 #   set :forward_agent, true     # SSH forward_agent.
+
+set :user, "rails"
 
 # Shared dirs and files will be symlinked into the app-folder by the 'deploy:link_shared_paths' step.
 # Some plugins already add folders to shared_dirs like `mina/rails` add `public/assets`, `vendor/bundle` and many more
