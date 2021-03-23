@@ -30,6 +30,7 @@ en:
     "on":               "On"
     select_category:    "Select one or more categories"
     select_instuctions: "Select one or more categories by holding the Control and/or Shift keys while clicking"
+    submit:             "Post"
     text:               "Article's content"
     title:              "Title"
     write:              "Write something..."

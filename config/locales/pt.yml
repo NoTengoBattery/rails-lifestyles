@@ -30,6 +30,7 @@ pt:
     "on":               "Em"
     select_category:    "Selecione uma ou + categorias"
     select_instuctions: "Selecione uma ou + categorias pressionando a tecla Control e/ou Shift enquanto clica"
+    submit:             "Postar"
     text:               "Conteúdo do artigo"
     title:              "Título"
     write:              "Escrever algo"
