@@ -30,7 +30,7 @@ es:
     "on":               "El"
     select_category:    "Seleccioná una o más categorías"
     select_instuctions: "Seleccioná una o más categorías presionando la tecla Control y/o Shift mientras das clic"
-    submit:             "Post"
+    submit:             "Publicar"
     text:               "Contenido del artículo"
     title:              "Título"
     write:              "Escribí algo..."
