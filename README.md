@@ -25,6 +25,7 @@ A demo website for a blog-like "Lifestyle" page, user registration, authorizatio
 
 ## Live Demo
 Visit this demo on my website [notengobattery.com](https://lifestyle.demo.notengobattery.com/)
+Video presentation on [YouTube](https://youtu.be/OKZGxJaf0ak)
 
 ## Getting Started
 
