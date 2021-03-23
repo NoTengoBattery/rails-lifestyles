@@ -7,13 +7,13 @@ RSpec.describe "Home", type: :system do
 
     it "shows a featured article in the view" do
       visit root_path
-      featured_tag = find("#div-featured")
+      featured_tag = find("#featured")
       expect(featured_tag).to have_content(featured.Title)
     end
 
     it "shows the article's categories in the view" do
       visit root_path
-      featured_tag = find("#div-category-1")
+      featured_tag = find("#category-1")
       expect(featured_tag).to have_content(featured.Title)
     end
   end
