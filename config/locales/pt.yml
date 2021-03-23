@@ -17,6 +17,7 @@ pt:
     'on': Em
     select_instuctions: Selecione uma ou + categorias pressionando a tecla Control
       e/ou Shift enquanto clica
+    submit: Postar
     text: Conteúdo do artigo
     title: Título
     write: Escrever algo
@@ -43,10 +44,13 @@ pt:
       sign_in: O login deu ruim.
       sign_up: O cadastro deu ruim.
       unauthorized: Você não pode fazer isso...
+    already: Já é um membro? Clique aqui!
     delete_profile: Eliminar conta
+    edit: Editar
     edit_profile: Editar detalhes do usuário
     my_voted_articles: Seus artigos que estão bombando
     no_articles: Nada por aqui ainda... escreva um artigo!
+    not_yet: Não é um membro? Clique aqui e junte-se a nós!
     notice:
       destroy: O usuário e todos seus artigos serão apagados!
       edit: Informações atualizadas!

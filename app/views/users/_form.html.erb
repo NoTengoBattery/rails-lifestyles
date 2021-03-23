@@ -5,7 +5,7 @@
 </div>
 <% if link_path %>
   <div class="form-group">
-    <%= link_to I18n.t(link_text), link_path %>
+    <%= link_to link_text, link_path %>
   </div>
 <% end %>
-<%= form.submit t(button), class: "btn btn-primary" %>
+<%= form.submit button, class: "btn btn-primary" %>

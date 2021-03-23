@@ -10,7 +10,7 @@
   </div>
   <div class="col-12">
     <%= form_with model: @article, url: article_path(@article), method: :patch do |form| %>
-      <%= render "form", model: @article, form: form, button: "article.edit" %>
+      <%= render "form", model: @article, form: form, button: t("article.edit") %>
     <% end %>
   </div>
 </div>

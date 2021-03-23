@@ -17,6 +17,7 @@ en:
     'on': 'On'
     select_instuctions: Select one or more categories by holding the Control and/or
       Shift keys while clicking
+    submit: Post
     text: Article's content
     title: Title
     write: Write something...
@@ -44,10 +45,13 @@ en:
       sign_in: Sign in failed successfully.
       sign_up: Sign up failed successfully.
       unauthorized: Nope, you can't do that...
+    already: Already a member? Click here!
     delete_profile: Delete profile
+    edit: Edit
     edit_profile: Edit user details
     my_voted_articles: My most cool articles
     no_articles: Nothing to see here... but you can change that.
+    not_yet: Not yet a member? Click here!
     notice:
       destroy: The user and all asociated records have been desroyed!
       edit: User details edited!

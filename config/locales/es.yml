@@ -17,6 +17,7 @@ es:
     'on': El
     select_instuctions: Seleccioná una o más categorías presionando la tecla Control
       y/o Shift mientras das clic
+    submit: Publicar
     text: Contenido del artículo
     title: Título
     write: Escribí algo...
@@ -44,10 +45,13 @@ es:
       sign_in: El inicio de sesión ha fallado exitosamente.
       sign_up: El registro ha fallado exitosamente.
       unauthorized: No, señor. No podés hacer eso...
+    already: "¿Ya sos un miembo? ¡Clic aquí!"
     delete_profile: Eliminar perfil
+    edit: Editar
     edit_profile: Editar los detalles del usuario
     my_voted_articles: Mis artículos más chileros
     no_articles: Nada que ver por aquí... pero vos lo podés arreglar.
+    not_yet: "¿No sos un miembro? ¡Clic aquí!"
     notice:
       destroy: "¡El usuario y todos sus registros asociados se han destruido!"
       edit: "¡Detalles de usuario actualizados!"

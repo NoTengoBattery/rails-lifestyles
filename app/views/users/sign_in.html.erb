@@ -4,7 +4,7 @@
   </div>
   <div class="col-6 mx-auto">
     <%= form_with model: @user, url: sign_in_path do |form| %>
-      <%= render "form", model: @user, form: form, button: "user.sign_in", link_text: "user.not_yet", link_path: sign_up_path %>
+      <%= render "form", model: @user, form: form, button: t("user.sign_in"), link_text: t("user.not_yet"), link_path: sign_up_path %>
     <% end %>
   </div>
 </div>
