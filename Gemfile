@@ -59,6 +59,8 @@ group :development do
   gem "rubocop-faker", "~> 1.1"
   gem "rubocop-i18n", "~> 3.0"
   gem "rubocop-rake", "~> 0.5.1"
+  # This gem makes internationalization easier
+  gem "i18n-tasks", "~> 0.9.34"
 end
 
 group :test do
