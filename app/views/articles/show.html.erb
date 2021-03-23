@@ -37,7 +37,7 @@
   <%= image_tag(img_large, class: "col-12 mt-2 img-fluid article-cover", alt: @article.Title) %>
   <div class="col-12">
     <span class="iconify" data-icon="ri:list-unordered" data-inline="false"></span>
-    Categories:
+    <%= t("article.categories") %>
     <% @article.categories.each do |category| %>
       <%= link_to category.Name, category, class: "badge badge-primary" %>
     <% end %>

@@ -20,10 +20,10 @@ module LocaleSession
     end
 
     def configure_locale(config = {})
-      cookie_locale = filter_locale(config[:new]) if config[:new]
-      self.i18n_locale = filter_locale(cookie_locale)
-      return if cookie_locale
-      browser = filter_locale(HTTP::Accept::Languages.parse(request.accept_language || "").first&.locale)
+      self.cookie_locale = self.filter_locale(config[:new]) if config[:new]
+      self.i18n_locale = self.filter_locale(self.cookie_locale)
+      return if self.cookie_locale
+      browser = self.filter_locale(HTTP::Accept::Languages.parse(request.accept_language || "").first&.locale)
       self.i18n_locale = (browser || I18n.default_locale)
     end
 end
@@ -34,25 +34,25 @@ module ApplicationSession
       cookies.encrypted[:session_user] = (user_id&.integer? ? user_id : nil)
     end
 
-    def session_user # Protect against malicious crafted cookies
-      user_id = cookies.encrypted[:session_user]
-      user_id&.integer? ? (user_id) : (session_user_destroy; nil)
-    end
-
     def session_user_destroy
       cookies.delete(:session_user)
       @_user = nil
     end
 
+    def session_user # Protect against malicious crafted cookies
+      user_id = cookies.encrypted[:session_user]
+      user_id&.integer? ? (user_id) : (self.session_user_destroy; nil)
+    end
+
     def current_user
-      session_user ? (@_user ||= User.find(session_user)) : nil
+      self.session_user ? (@_user ||= User.find(self.session_user)) : nil
     rescue ActiveRecord::RecordNotFound # Protect against malicious crafted User IDs
-      session_user_destroy
+      self.session_user_destroy
       nil
     end
 
     def signed_in?
-      current_user ? true : false
+      self.current_user ? true : false
     end
 
     def backpath_set
@@ -72,7 +72,7 @@ module ApplicationSession
     end
 
     def authorize!
-      unless current_user.id == @user.id and @user.class == User
+      unless @user.class == User && self.current_user.id == @user.id
         redirect_back fallback_location: root_path, alert: I18n.t("user.alert.unauthorized")
       end
     end

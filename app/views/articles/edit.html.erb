@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-12">
-    <h1><%= t("article.modify") %></h1>
+    <h1><%= t("article.edit") %></h1>
   </div>
   <div class="col-12">
     <p class="text-primary">
@@ -10,7 +10,7 @@
   </div>
   <div class="col-12">
     <%= form_with model: @article, url: article_path(@article), method: :patch do |form| %>
-      <%= render "form", model: @article, form: form, button: "article.modify" %>
+      <%= render "form", model: @article, form: form, button: "article.edit" %>
     <% end %>
   </div>
 </div>

@@ -17,6 +17,6 @@ module UsersHelper
   end
 
   def authorized?
-    current_user.id == @user.id and @user.class == User
+    @user.class == User && current_user.id == @user.id
   end
 end

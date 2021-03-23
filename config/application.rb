@@ -36,6 +36,6 @@ module NoTengoLifestyle
     config.generators.system_tests = nil
 
     # Setup the supported locales for the project
-    config.i18n.available_locales = [:en]
+    config.i18n.available_locales = [:en, :es, :pt]
   end
 end
