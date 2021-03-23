@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Rake::Task["db:reset"].invoke
-
 Rails.env.production? ? (seeds="production") : (seeds="devel")
 Dir[Rails.root.join("db/seeds-#{seeds}/*.rb")].sort.each do |file|
   puts "Processing #{file.split('/').last}"
