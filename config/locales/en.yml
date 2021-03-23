@@ -32,7 +32,7 @@ en:
     select_instuctions: "Select one or more categories by holding the Control and/or Shift keys while clicking"
     text:               "Article's content"
     title:              "Title"
-    write:              "Write something"
+    write:              "Write something..."
   category:
     no_articles:        "Nothing to see here... yet 😉"
   nav:

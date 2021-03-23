@@ -5,7 +5,7 @@ module LocaleSession
     end
 
     def cookie_locale=(locale)
-      cookies.permanent[:locale] = local
+      cookies.permanent[:locale] = locale
     end
 
     def i18n_locale=(locale)
