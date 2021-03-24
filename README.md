@@ -3,7 +3,7 @@
 # Ruby on Rails: NoTengoLifestyle [Demo]
 > A "Lifestyle" website built from scratch using Ruby on Rails. It allows image uploading, user registration, and it's internationalized in several languages.
 
-![screenshot](./public/screenshot.gif)
+![screenshot](./doc/screenshot.gif)
 
 A demo website for a blog-like "Lifestyle" page, user registration, authorization, authentication, and internationalization. The website uses Ruby on Rails as its stacks, with `webpack`, semantic HTML, and SASS for the front-end.
 
