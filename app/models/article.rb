@@ -12,8 +12,9 @@ class Article < ApplicationRecord
   has_many :votes, foreign_key: :ArticleId, dependent: :destroy
   has_and_belongs_to_many :categories
 
-  scope :featured, -> { joins(:votes).order(votes_count: :desc).first }
-  scope :recent, -> { order(CreatedAt: :desc).distinct }
+  scope :n1, -> { includes(:user, :votes).with_attached_image }
+  scope :featured, -> { joins(:votes).order(votes_count: :desc).n1.first }
+  scope :of_category, ->(c) { joins(:categories).where("category_id=?", c).n1 }
 
   has_one_attached :image
 

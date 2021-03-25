@@ -3,7 +3,7 @@ class CategoriesController < ApplicationController
 
   private
     def category_from_params
-      @category = Category.includes(:articles).find(params.require(:id))
-      @articles = @category.articles.with_attached_image.recent
+      @category = Category.n1.find(params.require(:id))
+      @articles = Article.of_category(@category.id)
     end
 end

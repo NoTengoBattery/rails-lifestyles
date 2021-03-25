@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Ruby on Rails: NoTengoLifestyle [Demo]
+# Ruby on Rails: NoTengoStyle [Demo]
 
 > A "Lifestyle" website built from scratch using Ruby on Rails. It allows image uploading, user registration, and it's internationalized in several languages.
 

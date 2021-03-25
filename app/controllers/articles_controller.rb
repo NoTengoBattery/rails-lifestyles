@@ -42,6 +42,6 @@ class ArticlesController < ApplicationController
 
     def empty_article
       @article = Article.new
-      @categories = Category.top_categories
+      @categories = Category.ordered_categories
     end
 end

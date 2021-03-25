@@ -4,11 +4,11 @@ module VotesHelper
   end
 
   def vote_button(article = @article, params = {})
-    vote = article.votes.find_by(user: current_user)
-    if vote
+    vote = article.votes.of_user(current_user)
+    unless vote.empty?
       thumb = "subtract"
       label = "-1"
-      path = vote_path(vote)
+      path = vote_path(vote.first)
       params[:method] = :delete
     else
       thumb = "add"

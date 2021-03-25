@@ -29,7 +29,7 @@ pt:
       format: 'deve ter um dos seguintes formatos: %{formats}'
       oversize: deve ter menos de %{size}
   home: Home
-  name: Lifestyle
+  name: NoTengoStyle
   nav:
     toggle: Mostrar/Esconder a barra de navegação
   pluralize:

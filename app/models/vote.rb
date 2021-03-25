@@ -5,4 +5,7 @@ class Vote < ApplicationRecord
 
   belongs_to :article, foreign_key: :ArticleId, counter_cache: true
   belongs_to :user, foreign_key: :UserId, counter_cache: true
+
+  scope :n1, -> { includes(:user, :article) }
+  scope :of_user, ->(u) { where(user: u).n1 }
 end
