@@ -6,7 +6,6 @@
     "@fontsource/jetbrains-mono": "^4.2",
     "@fontsource/source-serif-pro": "^4.2",
     "@fontsource/work-sans": "^4.2",
-    "@iconify-icons/ri": "^1.1",
     "@iconify/iconify": "^1.0",
     "@rails/actioncable": "^6.1",
     "@rails/activestorage": "^6.1",
@@ -15,11 +14,13 @@
     "bootstrap": "^4.6",
     "jquery": "^3.6",
     "popper.js": "^1.16",
-    "sass": "^1.32",
     "turbolinks": "^5.2"
   },
   "version": "v0.01",
   "devDependencies": {
+    "@iconify/icons-cib": "^1.1",
+    "@iconify/icons-ri": "^1.1",
+    "sass": "^1.32",
     "stylelint": "^13.12",
     "stylelint-config-sass-guidelines": "^8.0",
     "webpack-dev-server": "^3.11"

@@ -16,7 +16,7 @@ module VotesHelper
       path = votes_path(vote: { ArticleId: article.id })
       params[:method] = :post
     end
-    content_tag(:span, "", class: :iconify, "data-icon": "ri-#{thumb}-fill", "data-inline": false) +
+    content_tag(:span, "", class: :iconify, "data-icon": "ri:#{thumb}-fill", "data-inline": false) +
     "\n" +
     link_to(label, path, params)
   end

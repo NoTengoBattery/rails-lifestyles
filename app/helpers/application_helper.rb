@@ -15,4 +15,10 @@ module ApplicationHelper
       "#{pre}primary"
     end
   end
+
+  def social_link(link, icon)
+    link_to(link, class: "nav-link d-flex align-items-center justify-content-around") do
+      content_tag(:span, "", class: :iconify, "data-icon": "cib:#{icon}", "data-inline": false)
+    end
+  end
 end

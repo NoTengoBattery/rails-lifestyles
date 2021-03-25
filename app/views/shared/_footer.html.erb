@@ -1,0 +1,14 @@
+<footer class="footer mt-auto p-2 bg-secondary text-white">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <%= link_to t("name"), root_path, class: "h5 m-0 text-white" %>
+    <span>Copyright © 2021 Oever González — <%= t("some_rights") %>.</span>
+    <div class="d-flex justify-content-between align-items-center">
+      <span><%= t("connect_me") %>:</span>
+      <div class="footer-social d-flex justify-content-between align-items-center">
+        <%= social_link("https://twitter.com/notengobattery/", "twitter") %>
+        <%= social_link("https://www.linkedin.com/in/notengobattery/", "linkedin-in") %>
+        <%= social_link("https://github.com/NoTengoBattery/", "github") %>
+      </div>
+    </div>
+  </div>
+</footer>

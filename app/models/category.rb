@@ -13,6 +13,6 @@ class Category < ApplicationRecord
   scope :top_categories, -> { ordered_categories.n1.select { |x| x.articles.size >= 1 } }
 
   def most_recent_article
-    self.articles.order(CreatedAt: :desc).first
+    self.articles.order(created_at: :desc).first
   end
 end

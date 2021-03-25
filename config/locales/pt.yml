@@ -15,8 +15,7 @@ pt:
       destroy: Artigo deletado!
       edit: Artigo Atualizado com sucesso!
     'on': Em
-    select_instuctions: Selecione uma ou + categorias pressionando a tecla Control
-      e/ou Shift enquanto clica
+    select_instuctions: Selecione uma ou + categorias pressionando a tecla Control e/ou Shift enquanto clica
     submit: Postar
     text: Conteúdo do artigo
     title: Título
@@ -24,8 +23,10 @@ pt:
   category:
     no_articles: Nada por aqui ainda...
   close: Fechar
+  connect_me: Entre em contato
   errors:
     messages:
+      blank: não pode estar em branco
       format: 'deve ter um dos seguintes formatos: %{formats}'
       oversize: deve ter menos de %{size}
   home: Home
@@ -36,6 +37,7 @@ pt:
     error_saved:
       one: Um erro impediu %{thing} de ser salvo.
       other: "%{count} erros impediram %{thing} de ser salvo."
+  some_rights: Alguns direitos reservados
   sure: Tem certeza? Se prosseguir, esta ação não poderá ser desfeita!
   user:
     alert:

@@ -13,8 +13,10 @@ class Article < ApplicationRecord
   has_and_belongs_to_many :categories
 
   scope :n1, -> { includes(:user, :votes).with_attached_image }
-  scope :featured, -> { joins(:votes).order(votes_count: :desc).n1.first }
+  scope :featured, -> {
+    joins(:categories, :votes).order(votes_count: :desc, created_at: :desc, Priority: :desc).n1.first }
   scope :of_category, ->(c) { joins(:categories).where("category_id=?", c).n1 }
+  scope :recent, -> { order(created_at: :desc).distinct.n1 }
 
   has_one_attached :image
 

@@ -15,8 +15,7 @@ en:
       destroy: Say goodbye to your masterpiece!
       edit: "What was that? A mistake? \U0001F914 We are glad it's fixed now!"
     'on': 'On'
-    select_instuctions: Select one or more categories by holding the Control and/or
-      Shift keys while clicking
+    select_instuctions: Select one or more categories by holding the Control and/or Shift keys while clicking
     submit: Post
     text: Article's content
     title: Title
@@ -24,8 +23,10 @@ en:
   category:
     no_articles: "Nothing to see here... yet \U0001F609"
   close: Close
+  connect_me: Connect with me
   errors:
     messages:
+      blank: can't be blank
       format: 'must be one of the following formats: %{formats}'
       oversize: must be less than %{size}
   home: Home
@@ -35,8 +36,8 @@ en:
   pluralize:
     error_saved:
       one: Whoops, there is one error over there and the %{thing} can not be saved.
-      other: Whoops, there are %{count} errors over there and the %{thing} can not
-        be saved.
+      other: Whoops, there are %{count} errors over there and the %{thing} can not be saved.
+  some_rights: Some rights reserved
   sure: Are you sure about that? If you confirm, nobody can save you later!
   user:
     alert:

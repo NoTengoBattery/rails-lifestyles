@@ -1,6 +1,6 @@
 @mixin tint-gradient($tilt) {
   background: rgb(0, 0, 0);
-  background: linear-gradient($tilt, rgba(0, 0, 0, 1.0) 0%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient($tilt, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 65%, rgba(0, 0, 0, 0) 100%);
 }
 
 .tint-top {

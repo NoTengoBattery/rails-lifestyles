@@ -15,8 +15,7 @@ es:
       destroy: "¡Decile adiós a tu obra maestra!"
       edit: "¿Qué fue eso, un error? \U0001F914 ¡Nos alegra que lo hayás arreglado!"
     'on': El
-    select_instuctions: Seleccioná una o más categorías presionando la tecla Control
-      y/o Shift mientras das clic
+    select_instuctions: Seleccioná una o más categorías presionando la tecla Control y/o Shift mientras das clic
     submit: Publicar
     text: Contenido del artículo
     title: Título
@@ -24,8 +23,10 @@ es:
   category:
     no_articles: "Nada que ver por aquí... aún \U0001F609"
   close: Cerrar
+  connect_me: Conectá conmigo
   errors:
     messages:
+      blank: no puede estar en blanco
       format: 'debe tener uno de los siguientes formatos: %{formats}'
       oversize: debe tener un tamaño menor a %{size}
   home: Inicio
@@ -35,8 +36,8 @@ es:
   pluralize:
     error_saved:
       one: Ups, un errosito por aquí, por aca... y tu %{thing} no se guardó.
-      other: Ups, unos %{count} errorsitos por aquí, por aca... y tu %{thing} no se
-        guardó.
+      other: Ups, unos %{count} errorsitos por aquí, por aca... y tu %{thing} no se guardó.
+  some_rights: Algunos derechos reservados
   sure: "¿Estás seguro de eso? Si confirmás, ¡nadie te podrá salvar después!"
   user:
     alert:
@@ -57,8 +58,7 @@ es:
       edit: "¡Detalles de usuario actualizados!"
       sign_in: "¡Bienvenido de vuelta!"
       sign_out: "¡Sesión cerrada exitosamente!"
-      sign_up: "¡Bienvenido a nuestro sitio web! Esperamos que te guste estar por
-        aquí :3"
+      sign_up: "¡Bienvenido a nuestro sitio web! Esperamos que te guste estar por aquí :3"
     sign_in: Iniciar sesión
     sign_out: Cerrar sesión
     sign_up: Registrarse
