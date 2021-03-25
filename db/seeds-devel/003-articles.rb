@@ -1,4 +1,4 @@
-new_records = 50
+new_records = 100
 records = 0
 invalid = 0
 
@@ -7,7 +7,7 @@ until records >= new_records do
     article = FactoryBot.build(:article)
     user_id = User.order(Arel.sql("RANDOM()")).first.id
     article.AuthorId = user_id
-    rand(1..5).times do
+    rand(2..5).times do
       article.categories << Category.order(Arel.sql("RANDOM()")).first
     end
     sleep 0.125

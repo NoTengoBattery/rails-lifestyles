@@ -13,7 +13,7 @@ class Article < ApplicationRecord
   has_and_belongs_to_many :categories
 
   scope :featured, -> { joins(:votes).order(votes_count: :desc).first }
-  scope :recent, -> { order(CreatedAt: :desc) }
+  scope :recent, -> { order(CreatedAt: :desc).distinct }
 
   has_one_attached :image
 

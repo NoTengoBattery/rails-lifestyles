@@ -11,7 +11,6 @@
   &-slim {
     @extend %article-cover;
     height: 20vh;
-    min-height: 128px;
   }
 }
 
@@ -19,7 +18,7 @@
   white-space: break-spaces;
 }
 
-vh50 {
+.vh50 {
   height: 50vh;
   min-height: 320px;
 }
