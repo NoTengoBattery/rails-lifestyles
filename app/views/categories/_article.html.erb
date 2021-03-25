@@ -13,10 +13,17 @@
             <%= t("article.by") %>
             <%= link_to article.user.Name, article.user %>
           </span>
-          <span>
-            <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
-            <%= article.votes.size %>
-          </span>
+          <div class="d-flex justify-content-between">
+            <span>
+              <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+              <%= article.votes.size %>
+            </span>
+            <% if can_vote?(article) %>
+              <span>
+                <%= vote_button(article) %>
+              </span>
+            <% end %>
+          </div>
         </div>
       </div>
     </article>

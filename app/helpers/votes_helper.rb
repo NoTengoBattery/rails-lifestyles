@@ -1,10 +1,10 @@
 module VotesHelper
-  def can_vote?
-    @article.user != current_user
+  def can_vote?(article = @article)
+    article.user != current_user
   end
 
-  def vote_button(params = {})
-    vote = @article.votes.find_by(user: current_user)
+  def vote_button(article = @article, params = {})
+    vote = article.votes.find_by(user: current_user)
     if vote
       thumb = "subtract"
       label = "-1"
@@ -13,7 +13,7 @@ module VotesHelper
     else
       thumb = "add"
       label = "+1"
-      path = votes_path(vote: { ArticleId: @article.id })
+      path = votes_path(vote: { ArticleId: article.id })
       params[:method] = :post
     end
     content_tag(:span, "", class: :iconify, "data-icon": "ri-#{thumb}-fill", "data-inline": false) +
