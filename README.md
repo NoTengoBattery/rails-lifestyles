@@ -29,7 +29,7 @@ A demo website for a blog-like "Lifestyle" page with user registration, authoriz
 
 Visit this demo on my website [notengobattery.com](https://lifestyle.demo.notengobattery.com/)
 
-Check the video presentation on [YouTube](https://youtu.be/OKZGxJaf0ak/)
+Check the video presentation on [YouTube](https://youtu.be/GATarBv2JLc/)
 
 ## Getting Started
 
