@@ -1,6 +1,6 @@
 module Authenticable
   private
-    def session_user=(user_id) # Protect agains malicious crafted user_id's
+    def session_user=(user_id) # Protect against malicious crafted user_id's
       cookies.encrypted[:session_user] = (user_id&.integer? ? user_id : nil)
     end
 
@@ -25,17 +25,8 @@ module Authenticable
       self.current_user ? true : false
     end
 
-    def backpath_set
-      cookies[:backpath] = request.path if request.request_method_symbol == :get
-    end
-
-    def backpath
-      cookies.delete(:backpath)
-    end
-
     def sign_in!
       unless signed_in?
-        backpath_set
         redirect_to sign_in_path, alert: I18n.t("user.alert.need_sign_in")
       end
       true

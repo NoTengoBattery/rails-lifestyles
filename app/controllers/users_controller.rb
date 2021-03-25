@@ -10,8 +10,7 @@ class UsersController < ApplicationController
   def new_user
     @user = User.new(user_params)
     if @user.save
-      redirect_me = backpath || @user
-      redirect_to redirect_me, notice: I18n.t("user.notice.sign_up")
+      redirect_to @user, notice: I18n.t("user.notice.sign_up")
     else
       flash.now[:alert] = I18n.t("user.alert.sign_up")
       render :sign_up
@@ -25,8 +24,7 @@ class UsersController < ApplicationController
   def new_session
     @user = User.find_by(user_params) || User.new(user_params)
     unless @user.new_record?
-      redirect_me = backpath || @user
-      redirect_to redirect_me, notice: I18n.t("user.notice.sign_in")
+      redirect_to @user, notice: I18n.t("user.notice.sign_in")
     else
       flash.now[:alert] = I18n.t("user.alert.sign_in")
       render :sign_in
@@ -46,7 +44,7 @@ class UsersController < ApplicationController
 
   def show
     @votes = @user.votes
-    @articles = @user.articles.includes(:image_attachment, :image_blob).order(votes_count: :desc).limit(10)
+    @articles = @user.articles.with_attached_image.order(votes_count: :desc).limit(10)
   end
 
   def destroy
