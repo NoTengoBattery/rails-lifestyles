@@ -1,7 +1,4 @@
 <div class="row m-0 mb-n2">
-  <div class="col-12">
-    <h1 class="text-center text-uppercase font-weight-bold text-primary"><%= @category.Name %></h1>
-  </div>
   <div class="col-12 p-0">
     <% if @articles.size >= 1 %>
       <%= render "article", category: @category, articles: @articles, id: "article" %>
