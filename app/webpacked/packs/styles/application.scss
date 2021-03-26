@@ -26,15 +26,16 @@ html {
   }
 }
 
-  .flex-1-1-0 {
-      flex: 1 1 0;
-  }
-  .flex-3-1-0 {
+.flex-1-1-0 {
+  flex: 1 1 0;
+}
+
+.flex-3-1-0 {
   flex: 3 1 0;
 }
 
-@include media-breakpoint-up(sm){
+@include media-breakpoint-up(sm) {
   .flex-md-column {
-      flex-direction: column !important;
+    flex-direction: column !important;
   }
 }
