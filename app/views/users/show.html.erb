@@ -1,5 +1,5 @@
-<div class="row">
-  <div class="col-9 mx-auto">
+<div class="container row p-0 m-auto">
+  <div class="col-12">
     <h1 class="mb-0">
       <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
       <%= @user.Name %>
@@ -9,7 +9,7 @@
       <%= link_to t("user.edit_profile"), edit_user_path(@user) %>
     </p>
   </div>
-  <div class="col-9 mx-auto">
+  <div class="col-12">
     <p>
       <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
       <%= t("user.total_voted") %>:
@@ -20,13 +20,13 @@
       <span><%= @articles.size %></span>
     </p>
   </div>
-  <div class="col-9 mx-auto">
+  <div class="col-12">
     <h2>
       <span class="iconify" data-icon="ri:file-text-fill" data-inline="false"></span>
       <%= t("user.my_voted_articles") %>
     </h2>
   </div>
-  <div class="col-9 p-0 mx-auto">
+  <div class="col-12 p-0 mx-auto">
     <main>
       <% if @articles.size >= 1 %>
         <%= render "article", articles: @articles, id: "article" %>

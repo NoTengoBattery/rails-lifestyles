@@ -1,6 +1,6 @@
-@use '@csstools/normalize.css/normalize';
-@use 'modules/fontsource';
-@use 'modules/bootstrap';
+@use '@csstools/normalize.css/normalize' as *;
+@use 'modules/fontsource' as *;
+@use 'modules/bootstrap' as *;
 @use 'pages';
 @use 'users';
 @use 'articles';
@@ -15,7 +15,7 @@ html {
 
 .footer {
   &-social > * {
-    background: var(--primary);
+    background: $primary;
     border-radius: 50%;
     color: #fff;
     font-size: 24px;
@@ -23,5 +23,18 @@ html {
     margin-left: 8px;
     padding: 0;
     width: 36px;
+  }
+}
+
+  .flex-1-1-0 {
+      flex: 1 1 0;
+  }
+  .flex-3-1-0 {
+  flex: 3 1 0;
+}
+
+@include media-breakpoint-up(sm){
+  .flex-md-column {
+      flex-direction: column !important;
   }
 }

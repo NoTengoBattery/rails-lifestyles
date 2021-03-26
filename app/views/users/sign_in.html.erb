@@ -1,8 +1,8 @@
-<div class="row flex-column">
-  <div class="col-6 mx-auto">
+<div class="container row p-0 m-auto flex-column">
+  <div class="col-12">
     <h1><%= t("user.sign_in") %></h1>
   </div>
-  <div class="col-6 mx-auto">
+  <div class="col-12">
     <%= form_with model: @user, url: sign_in_path do |form| %>
       <%= render "form", model: @user, form: form, button: t("user.sign_in"), link_text: t("user.not_yet"), link_path: sign_up_path %>
     <% end %>
