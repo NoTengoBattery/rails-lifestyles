@@ -31,7 +31,7 @@
     </span>
   </div>
   <%= image_tag(img_large, class: "col-12 mt-2 img-fluid article-cover", alt: @article.Title) %>
-  <div class="col-12 d-flex align-items-center">
+  <div class="col-12 d-flex align-items-center flex-wrap">
     <span class="iconify" data-icon="ri:list-unordered" data-inline="false"></span>
     <%= t("article.categories") %>:
     <%= list_categories %>
