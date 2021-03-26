@@ -37,9 +37,11 @@ Check the video presentation on [YouTube](https://youtu.be/GATarBv2JLc/)
 
 For running this program locally, please:
 
+-   [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/)
 -   [Install Ruby 3.0](https://www.ruby-lang.org/en/downloads/)
 -   [Install node.js](https://nodejs.org/en/download/)
--   [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/)
+-   [Install `yarn` globally](https://docs.npmjs.com/downloading-and-installing-packages-globally/)
+-   [Install GraphicsMagic](http://www.graphicsmagick.org/README.html/)
 
 > Note: as discussed below, downloading the source code without `git` is possible.
 
@@ -51,7 +53,7 @@ Once git is installed, get a copy of this project by one of the following method
     -   Click [here](https://github.com/NoTengoBattery/rails-lifestyles/archive/refs/heads/main.zip) to download a copy of the stable branch
     -   Extract it in a place with easy access to a terminal
 
-When Ruby 3.0 and Node.js are installed, and you have a copy of the source code, open the terminal and navigate to the folder where the code is. If you need help navigating using the terminal, please check the following articles:
+When Ruby 3.0, GraphicsMagic and Node.js are installed, and you have a copy of the source code, open the terminal and navigate to the folder where the code is. If you need help navigating using the terminal, please check the following articles:
 
 -   For Windows users, check [this](https://www.technoloxy.com/tutorials/cmd-navigate-view-run/) article.
 -   For UNIX/UNIX-like users such as Linux and macOS users, check [this](https://swcarpentry.github.io/shell-novice/02-filedir/index.html) article.
