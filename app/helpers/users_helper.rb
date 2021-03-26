@@ -16,6 +16,21 @@ module UsersHelper
     end
   end
 
+  def render_user_articles(list = @articles)
+    capture do
+      if @articles.size >= 1
+        list.each do |record|
+          concat render "users/article", article: record
+        end
+      else
+        content_tag(:p) do
+          concat content_tag(:span, nil, class: :iconify, 'data-icon': "ri:error-warning-fill", 'data-inline': false)
+          concat I18n.t("user.no_articles")
+        end
+      end
+    end
+  end
+
   def authorized?
     @user.class == User && current_user.id == @user.id
   end

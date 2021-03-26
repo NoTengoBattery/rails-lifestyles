@@ -1,12 +1,10 @@
-<% articles.each do |article| %>
-  <article class="d-flex flex-column position-relative">
-    <%= image_tag img_large(article), class: "w-100 article-cover-slim", alt: article.Title %>
-    <div class="d-flex justify-content-between text-white abs-bottom p-3 tint-bottom"">
-      <%= link_to article.Title, article_path(article), class: "h6 text-truncate d-block text-white" %>
-      <span class="text-nowrap ml-2">
-        <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
-        <%= article.votes.size %>
-      </span>
-    </div>
-  </article>
-<% end %>
+<article class="d-flex flex-column position-relative">
+  <%= image_tag img_large(article), class: "w-100 article-cover-slim", alt: article.Title %>
+  <div class="d-flex justify-content-between text-white abs-bottom p-3 tint-bottom"">
+    <%= link_to article.Title, article_path(article), class: "h6 text-truncate d-block text-white" %>
+    <span class="text-nowrap ml-2">
+      <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+      <%= article.votes.size %>
+    </span>
+  </div>
+</article>

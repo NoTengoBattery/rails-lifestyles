@@ -1,9 +1,6 @@
 module VotesHelper
-  def can_vote?(article = @article)
-    article.user != current_user
-  end
-
   def vote_button(article = @article, params = {})
+    return if article.user == current_user
     vote = article.votes.of_user(current_user)
     unless vote.empty?
       thumb = "subtract"

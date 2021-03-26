@@ -14,7 +14,7 @@ set :application_name, "lifestyle-demo"
 set :domain, "notengobattery.com"
 set :deploy_to, "/www/sockets/rails/lifestyle-demo"
 set :repository, "git@github.com:NoTengoBattery/rails-lifestyles.git"
-set :branch, "main"
+set :branch, "feature/project"
 
 # Optional settings:
 #   set :user, "rails" # Username in the server to SSH to.

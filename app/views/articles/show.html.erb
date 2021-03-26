@@ -21,11 +21,7 @@
     </span>
   </div>
   <div class="col-3 text-right">
-    <% if can_vote? %>
-      <span>
-        <%= vote_button %>
-      </span>
-    <% end %>
+    <span><%= vote_button %></span>
   </div>
   <div class="col-12">
     <span id="date">
@@ -35,12 +31,10 @@
     </span>
   </div>
   <%= image_tag(img_large, class: "col-12 mt-2 img-fluid article-cover", alt: @article.Title) %>
-  <div class="col-12">
+  <div class="col-12 d-flex align-items-center">
     <span class="iconify" data-icon="ri:list-unordered" data-inline="false"></span>
-    <%= t("article.categories") %>
-    <% @article.categories.distinct.each do |category| %>
-      <%= link_to category.Name, category, class: "badge badge-primary" %>
-    <% end %>
+    <%= t("article.categories") %>:
+    <%= list_categories %>
   </div>
   <div class="col-12 mt-2">
     <div id="text" class="multiline-text"><%= @article.Text %></div>

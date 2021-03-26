@@ -3,6 +3,6 @@
     <%= render "featured", article: @featured, id: "featured" if @featured %>
   </div>
   <main class="col-12 row m-0 px-0">
-    <%= render "category", categories: @categories, id: "category" unless @categories.empty? %>
+    <%= render @categories, id: "category" %>
   </main>
 </div>

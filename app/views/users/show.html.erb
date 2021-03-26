@@ -28,14 +28,7 @@
   </div>
   <div class="col-12 p-0 mx-auto">
     <main>
-      <% if @articles.size >= 1 %>
-        <%= render "article", articles: @articles, id: "article" %>
-      <% else %>
-        <p>
-          <span class="iconify" data-icon="ri:error-warning-fill" data-inline="false"></span>
-          <%= t("user.no_articles") %>
-        </p>
-      <% end %>
+      <%= render_user_articles %>
     </main>
   </div>
 </div>

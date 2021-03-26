@@ -1,12 +1,5 @@
 <div class="row m-0 mb-n2">
   <div class="col-12 p-0">
-    <% if @articles.size >= 1 %>
-      <%= render "article", category: @category, articles: @articles, id: "article" %>
-    <% else %>
-      <p>
-        <span class="iconify" data-icon="ri:error-warning-fill" data-inline="false"></span>
-        <%= t("category.no_articles") %>
-      </p>
-    <% end %>
+    <%= show_articles %>
   </div>
 </div>
