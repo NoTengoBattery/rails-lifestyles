@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 
   def show
     @votes = @user.votes
-    @articles = @user.articles.with_attached_image.order(votes_count: :desc).limit(10)
+    @articles = @user.articles.top(10)
   end
 
   def destroy

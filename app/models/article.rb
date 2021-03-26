@@ -17,6 +17,7 @@ class Article < ApplicationRecord
     joins(:categories, :votes).order(votes_count: :desc, created_at: :desc, Priority: :desc).n1.first }
   scope :of_category, ->(c) { joins(:categories).where("category_id=?", c).n1 }
   scope :recent, -> { order(created_at: :desc).distinct.n1 }
+  scope :top, -> (t) { joins(:votes).order(votes_count: :desc, created_at: :desc).limit(t).n1 }
 
   has_one_attached :image
 
