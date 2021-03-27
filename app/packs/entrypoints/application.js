@@ -11,6 +11,8 @@ import "channels"
 import Iconify from "@iconify/iconify";
 import "bootstrap";
 
+console.log('hehehe')
+
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
