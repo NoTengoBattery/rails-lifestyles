@@ -1,4 +1,4 @@
-module.exports = {
+let postcss = {
   plugins: [
     require('postcss-import'),
     require('postcss-flexbugs-fixes'),
@@ -8,6 +8,12 @@ module.exports = {
       },
       stage: 3
     }),
+  ]
+}
+
+// Only run PurgeCSS in production (you can also add staging here)
+if (process.env.NODE_ENV === "production") {
+  postcss.plugins.push(
     require('@fullhuman/postcss-purgecss')({
       content: [
         './app/**/*.html.erb',
@@ -19,9 +25,12 @@ module.exports = {
         './app/javascript/**/*.vue',
       ],
       safelist: {
+        standard: ['show'],
         greedy: [/^%/]
       },
-      defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
     })
-  ]
+  )
 }
+
+module.exports = postcss

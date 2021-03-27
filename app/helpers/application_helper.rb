@@ -5,14 +5,14 @@ module ApplicationHelper
   end
 
   def alert_class(type)
-    pre = "alert alert-"
+    pre = "alert"
     case type
     when "alert"
-      "#{pre}danger"
+      "#{pre} alert-danger"
     when "notice"
-      "#{pre}success"
+      "#{pre} alert-success"
     else
-      "#{pre}primary"
+      "#{pre} alert-primary"
     end
   end
 

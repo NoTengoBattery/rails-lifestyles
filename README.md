@@ -41,7 +41,7 @@ For running this program locally, please:
 -   [Install Ruby 3.0](https://www.ruby-lang.org/en/downloads/)
 -   [Install node.js](https://nodejs.org/en/download/)
 -   [Install `yarn` globally](https://docs.npmjs.com/downloading-and-installing-packages-globally/)
--   [Install GraphicsMagic](http://www.graphicsmagick.org/README.html/)
+-   [Install GraphicsMagic](http://www.graphicsmagick.org/README.html)
 
 > Note: as discussed below, downloading the source code without `git` is possible.
 
@@ -58,13 +58,15 @@ When Ruby 3.0, GraphicsMagic and Node.js are installed, and you have a copy of t
 -   For Windows users, check [this](https://www.technoloxy.com/tutorials/cmd-navigate-view-run/) article.
 -   For UNIX/UNIX-like users such as Linux and macOS users, check [this](https://swcarpentry.github.io/shell-novice/02-filedir/index.html) article.
 
-> Note: the following commands should be executed in the project's root directory.
+> Note: **all** the following commands should be executed in the project's root directory.
 
 Install the dependencies by running `bundle install`. There may be need for providing the administrator password. For more information about Ruby's `bundle` tool, please check [here](https://bundler.io/man/bundle-install.1.html).
 
 Prepare the working environment by running the following command: `bundle exec bin/setup`. That command will automatically set up the development environment and finish the installation of the Node.js dependencies.
 
 ### Running
+
+> Note: to test all features, run the development **dabatase seeds**. This will populate the local database with mock objects. This way, the website will behave as it has content. Execute `bundle exec rails db:seed` to generate the mock objects in the database.
 
 After following the instructions for getting started, execute `bundle exec rails server` for running this project. This will start the Rails server. Visit the local demo at <http://localhost:3000> (by default).
 
