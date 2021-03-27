@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def social_link(link, icon)
-    link_to(link, class: "nav-link d-flex align-items-center justify-content-around") do
+    link_to(link, class: "nav-link d-flex align-items-center justify-content-around footer-social") do
       content_tag(:span, "", class: :iconify, "data-icon": "cib:#{icon}", "data-inline": false)
     end
   end

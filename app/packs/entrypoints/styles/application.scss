@@ -13,8 +13,7 @@ html {
   height: 100vh;
 }
 
-.footer {
-  &-social > * {
+.footer-social {
     background: $primary;
     border-radius: 50%;
     color: #fff;
@@ -23,7 +22,6 @@ html {
     margin-left: 8px;
     padding: 0;
     width: 36px;
-  }
 }
 
 .flex-1-1-0 {
