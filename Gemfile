@@ -42,6 +42,8 @@ group :development, :test do
   gem "rspec-rails", "~> 4.0", ">= 4.0.2"
   gem "factory_bot_rails", "~> 6.1"
   gem "faker", "~> 2.16"
+  # Helper to avoid N+1 and unused eager loads
+  gem "bullet", "~> 6.1", ">= 6.1.4"
 end
 
 group :development do
@@ -52,15 +54,15 @@ group :development do
   gem "listen", "~> 3.4", ">= 3.4.1"
   gem "rack-mini-profiler", "~> 2.3", ">= 2.3.1"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem "spring"
+  gem "spring", "~> 2.1", ">= 2.1.1"
   # Rubocop linter gems for linting the source code during development
   gem "rubocop-rails_config", "~> 1.3", ">= 1.3.3"
   gem "rubocop-rspec", "~> 2.2"
   gem "rubocop-faker", "~> 1.1"
   gem "rubocop-i18n", "~> 3.0"
-  gem "rubocop-rake", "~> 0.5.1"
+  gem "rubocop-rake", "~> 0.5"
   # This gem makes internationalization easier
-  gem "i18n-tasks", "~> 0.9.34"
+  gem "i18n-tasks", "~> 0.9"
 end
 
 group :test do

@@ -8,9 +8,8 @@ class Category < ApplicationRecord
 
   has_and_belongs_to_many :articles, dependent: :destroy
 
-  scope :n1, -> { includes(:articles) }
   scope :ordered_categories, -> { order(Priority: :desc) }
-  scope :top_categories, -> { ordered_categories.n1.select { |x| x.articles.size >= 1 } }
+  scope :top_categories, -> { ordered_categories.select { |x| x.articles.size >= 1 } }
 
   def most_recent_article
     self.articles.order(created_at: :desc).first

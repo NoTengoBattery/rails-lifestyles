@@ -12,10 +12,11 @@ class Article < ApplicationRecord
   has_many :votes, foreign_key: :ArticleId, dependent: :destroy
   has_and_belongs_to_many :categories
 
-  scope :n1, -> { includes(:user, :votes).with_attached_image }
+  scope :n1, -> { with_attached_image }
+  scope :n2, -> { n1.includes([:user]) }
   scope :featured, -> {
     joins(:categories, :votes).order(votes_count: :desc, created_at: :desc, Priority: :desc).n1.first }
-  scope :of_category, ->(c) { joins(:categories).where("category_id=?", c).n1 }
+  scope :of_category, ->(c) { joins(:categories).where("category_id=?", c).n2 }
   scope :recent, -> { order(created_at: :desc).distinct.n1 }
   scope :top, -> (t) { joins(:votes).order(votes_count: :desc, created_at: :desc).limit(t).n1 }
 
