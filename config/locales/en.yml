@@ -1,33 +1,68 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
+---
 en:
-  hello: "Hello world"
+  article:
+    alert:
+      create: Boo boo! This article could not be created.
+      edit: Boo boo! This article could not be edited.
+    article: Article
+    by: By
+    categories: Categories
+    delete: Delete article
+    edit: Edit article
+    image: Image
+    notice:
+      create: Ooh la la! Such magnifique creation.
+      destroy: Say goodbye to your masterpiece!
+      edit: "What was that? A mistake? \U0001F914 We are glad it's fixed now!"
+    'on': 'On'
+    select_instuctions: Select one or more categories by holding the Control and/or Shift keys while clicking
+    submit: Post
+    text: Article's content
+    title: Title
+    write: Write something...
+  category:
+    no_articles: "Nothing to see here... yet \U0001F609"
+  close: Close
+  connect_me: Connect with me
+  errors:
+    messages:
+      blank: can't be blank
+      format: 'must be one of the following formats: %{formats}'
+      oversize: must be less than %{size}
+  home: Home
+  name: NoTengoStyle
+  nav:
+    toggle: Toggle navigation bar
+  pluralize:
+    error_saved:
+      one: Whoops, there is one error over there and the %{thing} can not be saved.
+      other: Whoops, there are %{count} errors over there and the %{thing} can not be saved.
+  some_rights: Some rights reserved
+  sure: Are you sure about that? If you confirm, nobody can save you later!
+  user:
+    alert:
+      edit: Shame on us! We could not edit the user's details.
+      need_sign_in: You'll need to sign in before doing that...
+      sign_in: Sign in failed successfully.
+      sign_up: Sign up failed successfully.
+      unauthorized: Nope, you can't do that...
+    already: Already a member? Click here!
+    delete_profile: Delete profile
+    edit: Edit
+    edit_profile: Edit user details
+    my_voted_articles: My coolest articles
+    no_articles: Nothing to see here... but you can change that.
+    not_yet: Not yet a member? Click here!
+    notice:
+      destroy: The user and all asociated records have been desroyed!
+      edit: User details edited!
+      sign_in: Welcome back!
+      sign_out: Successfully signed out!
+      sign_up: Welcome to our website! We hope you enjoy being here :3
+    sign_in: Sign in
+    sign_out: Sign out
+    sign_up: Sign up
+    total_voted: Total voted articles
+    total_written: Total written articles
+    user: User
+    user_name: User name

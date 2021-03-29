@@ -1,0 +1,68 @@
+---
+es:
+  article:
+    alert:
+      create: "¡Bu bu! Este artículo no se pudo crear."
+      edit: "¡Bu bu! Este artículo no se pudo editar."
+    article: Artículo
+    by: Por
+    categories: Categorías
+    delete: Eliminar artículo
+    edit: Editar artículo
+    image: Imagen
+    notice:
+      create: "¡Uh-lalá! Cual magnífica creación."
+      destroy: "¡Decile adiós a tu obra maestra!"
+      edit: "¿Qué fue eso, un error? \U0001F914 ¡Nos alegra que lo hayás arreglado!"
+    'on': El
+    select_instuctions: Seleccioná una o más categorías presionando la tecla Control y/o Shift mientras das clic
+    submit: Publicar
+    text: Contenido del artículo
+    title: Título
+    write: Escribí algo...
+  category:
+    no_articles: "Nada que ver por aquí... aún \U0001F609"
+  close: Cerrar
+  connect_me: Conectá conmigo
+  errors:
+    messages:
+      blank: no puede estar en blanco
+      format: 'debe tener uno de los siguientes formatos: %{formats}'
+      oversize: debe tener un tamaño menor a %{size}
+  home: Inicio
+  name: HaveNoEstilo
+  nav:
+    toggle: Mostrar/Ocultar barra de navegación
+  pluralize:
+    error_saved:
+      one: Ups, un errosito por aquí, por aca... y tu %{thing} no se guardó.
+      other: Ups, unos %{count} errorsitos por aquí, por aca... y tu %{thing} no se guardó.
+  some_rights: Algunos derechos reservados
+  sure: "¿Estás seguro de eso? Si confirmás, ¡nadie te podrá salvar después!"
+  user:
+    alert:
+      edit: "¡Mea culpa! No pudimos editar los detalles del usuario."
+      need_sign_in: Vas a tener que iniciar sesión para hacer eso...
+      sign_in: El inicio de sesión ha fallado exitosamente.
+      sign_up: El registro ha fallado exitosamente.
+      unauthorized: No, señor. No podés hacer eso...
+    already: "¿Ya sos un miembo? ¡Clic aquí!"
+    delete_profile: Eliminar perfil
+    edit: Editar
+    edit_profile: Editar los detalles del usuario
+    my_voted_articles: Mis artículos más chileros
+    no_articles: Nada que ver por aquí... pero lo podés arreglar.
+    not_yet: "¿No sos un miembro? ¡Clic aquí!"
+    notice:
+      destroy: "¡El usuario y todos sus registros asociados se han destruido!"
+      edit: "¡Detalles de usuario actualizados!"
+      sign_in: "¡Bienvenido de vuelta!"
+      sign_out: "¡Sesión cerrada exitosamente!"
+      sign_up: "¡Bienvenido a nuestro sitio web! Esperamos que te guste estar por aquí :3"
+    sign_in: Iniciar sesión
+    sign_out: Cerrar sesión
+    sign_up: Registrarse
+    total_voted: Votos totales dados a artículos
+    total_written: Articulos totales escritos
+    user: Usuario
+    user_name: Nombre de usuario

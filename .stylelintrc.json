@@ -1,4 +1,4 @@
 {
   "extends": ["stylelint-config-sass-guidelines"],
-  "ignoreFiles": [".bundle/**", "node_modules/**", "public/packs*/**", "tmp/**", "vendor/**"]
+  "ignoreFiles": [".bundle/**", "node_modules/**", "public/packs*/**", "tmp/**", "vendor/bundle/**"]
 }

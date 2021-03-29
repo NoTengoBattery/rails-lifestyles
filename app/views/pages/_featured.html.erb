@@ -1,0 +1,9 @@
+<aside id="<%= "#{id}" %>">
+  <figure class="position-relative m-0">
+    <%= image_tag img_large(article), alt: article.Title, class: "article-cover" %>
+    <figcaption class="abs-bottom p-3 p-sm-4 tint-bottom">
+      <%= link_to article.Title, article_path(article), class: "h5 font-weight-bold" %>
+      <p class="multiline-text text-truncate sneak-peak"><%= article.Text %></p>
+    </figcaption>
+  </figure>
+</aside>

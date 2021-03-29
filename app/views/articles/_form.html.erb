@@ -1,0 +1,21 @@
+<%= render 'shared/form_errors', my_model: model, my_name: t("article.article") %>
+<div class="form-group">
+  <%= form.label :Title, t("article.title") %>
+  <%= form.text_field :Title, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= form.label :category_ids, t("article.categories") %>
+  <%= form.collection_select :category_ids, @categories, :id, :Name, {}, {multiple: true, include_blank: false, class: "form-control"} %>
+  <small>
+    <%= t("article.select_instuctions") %>
+  </small>
+</div>
+<div class="form-group">
+  <%= form.label :image, t("article.image") %>
+  <%= form.file_field :image, class: "form-control-file" %>
+</div>
+<div class="form-group">
+  <%= form.label :Text, t("article.text") %>
+  <%= form.text_area :Text, class: "form-control vh50" %>
+</div>
+<%= form.submit button, class: "btn btn-primary" %>

@@ -1,6 +1,21 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root "placeholders#index"
+  get "sign_up", to: "users#sign_up"
+  post "sign_up", to: "users#new_user"
+  get "sign_in", to: "users#sign_in"
+  post "sign_in", to: "users#new_session"
+  delete "sign_out", to: "users#sign_out"
+  resources :users, except: [:create, :index, :new]
+
+  resources :articles, except: [:index]
+
+  resources :categories, only: [:show]
+
+  resources :votes, only: [:create, :destroy]
+
   patch "locale/:locale", to: "locales#site_locale", as: "site_locale"
   put "locale", to: "locales#default_locale", as: "default_locale"
+
+  get "home", to: "pages#home"
+
+  root "pages#home"
 end

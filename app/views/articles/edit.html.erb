@@ -1,0 +1,16 @@
+<div class="container row p-0 m-auto">
+  <div class="col-12">
+    <h1><%= t("article.edit") %></h1>
+  </div>
+  <div class="col-12">
+    <p class="text-primary">
+      <span class="iconify" data-icon="ri:delete-bin-fill" data-inline="false"></span>
+      <%= link_to t("article.delete"), article_path(@article), method: :delete, data: { confirm: t("sure") } %>
+    </p>
+  </div>
+  <div class="col-12">
+    <%= form_with model: @article, url: article_path(@article), method: :patch do |form| %>
+      <%= render "form", model: @article, form: form, button: t("article.edit") %>
+    <% end %>
+  </div>
+</div>

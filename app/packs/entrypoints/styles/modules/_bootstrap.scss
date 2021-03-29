@@ -1,0 +1,9 @@
+$font-family-sans-serif: 'Work Sans', Arial, sans-serif !default;
+$font-family-serif: 'Source Serif Pro', Times, serif !default;
+$font-family-monospace: 'JetBrains Mono', monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+$primary: #fd6000;
+$secondary: #4d443e;
+$light: #f8f8f8;
+
+@import 'bootstrap/scss/bootstrap';
