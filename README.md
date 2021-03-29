@@ -41,7 +41,7 @@ For running this program locally, please:
 -   [Install Ruby 3.0](https://www.ruby-lang.org/en/downloads/)
 -   [Install node.js](https://nodejs.org/en/download/)
 -   [Install `yarn` globally](https://docs.npmjs.com/downloading-and-installing-packages-globally/)
--   [Install GraphicsMagic](http://www.graphicsmagick.org/README.html)
+-   [Install Vips](https://github.com/libvips/libvips/)
 
 > Note: as discussed below, downloading the source code without `git` is possible.
 

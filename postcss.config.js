@@ -16,13 +16,14 @@ if (process.env.NODE_ENV === "production") {
   postcss.plugins.push(
     require('@fullhuman/postcss-purgecss')({
       content: [
+        './app/**/*.html',
         './app/**/*.html.erb',
         './app/**/*.html.haml',
         './app/**/*.html.slim',
         './app/helpers/**/*.rb',
-        './app/javascript/**/*.js',
-        './app/javascript/**/*.jsx',
-        './app/javascript/**/*.vue',
+        './app/packs/**/*.js',
+        './app/packs/**/*.jsx',
+        './app/packs/**/*.vue',
       ],
       safelist: {
         standard: ['show'],
