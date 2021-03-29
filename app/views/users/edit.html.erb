@@ -1,0 +1,16 @@
+<div class="container row p-0 m-auto">
+  <div class="col-12">
+    <h1><%= t("user.edit_profile") %></h1>
+  </div>
+  <div class="col-12 pb-2">
+    <span>
+      <span class="iconify" data-icon="ri:delete-bin-fill" data-inline="false"></span>
+      <%= link_to t("user.delete_profile"), user_path(@user), method: :delete, data: { confirm: t("sure") } %>
+    </span>
+  </div>
+  <div class="col-12">
+    <%= form_with model: @user, url: user_path(@user), method: :patch do |form| %>
+      <%= render "form", model: @user, form: form, button: t("user.edit"), link_path: nil %>
+    <% end %>
+  </div>
+</div>

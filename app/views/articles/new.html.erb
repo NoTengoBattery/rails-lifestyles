@@ -1,0 +1,10 @@
+<div class="container row p-0 m-auto">
+  <div class="col-12">
+    <h1><%= t("article.write") %></h1>
+  </div>
+  <div class="col-12">
+    <%= form_with model: @article, url: articles_path do |form| %>
+      <%= render "form", model: @article, form: form, button: t("article.submit") %>
+    <% end %>
+  </div>
+</div>

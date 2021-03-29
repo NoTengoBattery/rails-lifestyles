@@ -10,6 +10,7 @@ require:
 AllCops:
   Exclude:
     - ".bundle/**/*"
+    - "db/**/*"
     - "node_modules/**/*"
     - "public/packs*/**/*"
     - "tmp/**/*"

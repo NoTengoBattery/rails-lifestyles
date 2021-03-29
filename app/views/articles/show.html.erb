@@ -1,0 +1,42 @@
+<div class="container row p-0 m-auto">
+  <div class="col-12">
+    <h1><%= @article.Title %></h1>
+  </div>
+  <div class="col-9">
+    <span id="author">
+      <%= t("article.by") %>
+      <%= link_to @author.Name, @author %>
+    </span>
+  </div>
+  <div class="col-3 text-right">
+    <span id="votes">
+      <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+      <%= @article.votes.size %>
+    </span>
+  </div>
+  <div class="col-9">
+    <span>
+      <span class="iconify" data-icon="ri:edit-2-fill" data-inline="false"></span>
+      <%= link_to t("article.edit"), edit_article_path(@article) %>
+    </span>
+  </div>
+  <div class="col-3 text-right">
+    <span><%= vote_button %></span>
+  </div>
+  <div class="col-12">
+    <span id="date">
+      <span class="iconify" data-icon="ri:calendar-fill" data-inline="false"></span>
+      <%= t("article.on") %>
+      <%= l(@article.CreatedAt) %>
+    </span>
+  </div>
+  <%= image_tag(img_large, class: "col-12 mt-2 img-fluid article-cover", alt: @article.Title) %>
+  <div class="col-12 d-flex align-items-center flex-wrap">
+    <span class="iconify" data-icon="ri:list-unordered" data-inline="false"></span>
+    <%= t("article.categories") %>:
+    <%= list_categories %>
+  </div>
+  <div class="col-12 mt-2">
+    <div id="text" class="multiline-text"><%= @article.Text %></div>
+  </div>
+</div>

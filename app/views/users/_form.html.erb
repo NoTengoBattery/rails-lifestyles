@@ -1,0 +1,11 @@
+<%= render 'shared/form_errors', my_model: model, my_name: t("user.user") %>
+<div class="form-group">
+  <%= form.label :Name, t("user.user_name") %>
+  <%= form.text_field :Name, class: "form-control" %>
+</div>
+<% if link_path %>
+  <div class="form-group">
+    <%= link_to link_text, link_path %>
+  </div>
+<% end %>
+<%= form.submit button, class: "btn btn-primary" %>

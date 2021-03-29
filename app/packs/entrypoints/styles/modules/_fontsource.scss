@@ -1,0 +1,7 @@
+@use '@fontsource/jetbrains-mono/scss/mixins' as JB;
+@use '@fontsource/work-sans/scss/mixins' as NS;
+@use '@fontsource/source-serif-pro/scss/mixins' as SSP;
+
+@include JB.fontFaceVariable($fontName: 'JetBrains Mono');
+@include NS.fontFaceVariable($fontName: 'Work Sans');
+@include SSP.fontFace($fontName: 'Source Serif Pro');

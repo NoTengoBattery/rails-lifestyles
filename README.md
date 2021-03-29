@@ -1,53 +1,104 @@
-# Dependencies
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
--   Ruby 3.0
--   Node.js 14 or newer
+# Ruby on Rails: NoTengoStyle [Demo]
 
-# Configuration [v0.25]
+> A "Lifestyle" website built from scratch using Ruby on Rails. It allows image uploading, user registration, and it's internationalized in several languages.
 
-1.  Use the template and make sure to **uncheck** "Include all branches"
-2.  Clone the repository to the local machine
-3.  Initialize git-flow in all local machines with `git flow init`
-    1.  Set production branch: `main`
-    2.  Set development branch: `development`
-    3.  Set the rest of the options as defaults
-    4.  Initialize a new feature branch. You can call it `setup-template`
-4.  Run `bundle update` to install the latest version of the gems for the project
-5.  Reinstall and setup the required packages by running `bundle exec bin/setup`
-6.  Generate the Rails credentials for the project: `EDITOR=true bundle exec rails credentials:edit`
-7.  Change the name of the project. Use the commit [324932f](https://github.com/NoTengoBattery/rails6-ruby3-hk-ghwf-psql/commit/324932fbc5e055a3f40dbe2a565ce663f85235d7) as reference
-8.  Also, do not forget to change the name and version from the `package.json` file
-9.  Execute the Rubocop command, so the linter's workflow won't fail: `bundle exec rubocop -A`
-10. Execute the Stylelint command, so the linter's workflow won't fail: `npx stylelint --fix "**/*.{css,scss}"`
-11. Add and commit all your changes
-12. Finalize your feature branch and merge your changes
-13. Everything should be ready to start working!
+![screenshot](./doc/screenshot.gif)
 
-# Code style
+A demo website for a blog-like "Lifestyle" page with user registration, authorization, authentication, and internationalization. The website uses Ruby on Rails with PostgreSQL as the back-end stack, with `webpack`, semantic HTML, and SASS for the front-end.
 
-This template uses Rubocop and Stylelint for enforcing the code style. In the root path, there are default Rubocop and Stylelint configurations. The recommended default is for all new Rails projects in general. It uses the official and latest cops and lints for the Rails components, user code, and stylesheets.
+## Built With
 
-# Notes before deploying
+-   [Ruby on Rails](https://rubyonrails.org/)
+-   [Ruby](https://www.ruby-lang.org/en/)
+-   [bootstrap](https://getbootstrap.com/)
+-   [sass](https://sass-lang.com/)
+-   [stylelint](https://stylelint.io/)
+-   [Gems](https://rubygems.org/)
+    -   [capybara](https://rubygems.org/gems/capybara/)
+    -   [factory_bot_rails](https://rubygems.org/gems/factory_bot_rails/)
+    -   [faker](https://rubygems.org/gems/faker/)
+    -   [http-accept](https://rubygems.org/gems/http-accept/)
+    -   [mina](https://rubygems.org/gems/mina/)
+    -   [rails-i18n](https://rubygems.org/gems/rails-i18n/)
+    -   [rubocop](https://rubygems.org/gems/rubocop/)
+    -   [shoulda](https://rubygems.org/gems/shoulda/)
 
-1.  Change the hostname for devise when deploying to production, check the files inside `config/environments`
+## Live Demo
 
-# General notes
+Visit this demo on my website [notengobattery.com](https://lifestyle.demo.notengobattery.com/)
 
-1.  All provided packages are already set up and ready to work and prepared for deployment using either Heroku or Mina. Note that some extra configuration is still needed. Included in this template:
-    -   Mina
-    -   Faker
-    -   RSpec
-    -   Devise
-    -   Capybara
-    -   Factory Bot
-    -   Normalize.css
-    -   Internationalization (thanks to @NoTengoBattery)
-    -   Stylelint with the official SASS configuration (thanks to @NoTengoBattery)
-    -   Dart SASS compiler instead of the default `node-sass`, which is severely limited
-    -   Disabled `text` and `sprockets` pipelines and replaced to use Webpacker **exclusively**
-    -   Rubocop with the official Rails configuration and extra enforcements (thanks to @NoTengoBattery)
-    -   Mina deployment to "bare metal" servers (it's fixed to work with Puma, thanks to @NoTengoBattery)
-    -   GitHub Workflows for linter enforcing and test suite (suitable for CI, thanks to @NoTengoBattery)
-    -   Support for both SQLite3 and PostgreSQL
-        -   SQLite3 for testing/development
-        -   PostgreSQL for deploying/production
+Check the video presentation on [YouTube](https://youtu.be/GATarBv2JLc/)
+
+## Getting Started
+
+### Preparing the local environment
+
+For running this program locally, please:
+
+-   [Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git/)
+-   [Install Ruby 3.0](https://www.ruby-lang.org/en/downloads/)
+-   [Install node.js](https://nodejs.org/en/download/)
+-   [Install `yarn` globally](https://docs.npmjs.com/downloading-and-installing-packages-globally/)
+-   [Install Vips](https://github.com/libvips/libvips/)
+
+> Note: as discussed below, downloading the source code without `git` is possible.
+
+Once git is installed, get a copy of this project by one of the following methods:
+
+-   By cloning the repository using `git`
+    -   `git clone git@github.com:NoTengoBattery/rails-lifestyles.git`
+-   By downloading a zip with the source code
+    -   Click [here](https://github.com/NoTengoBattery/rails-lifestyles/archive/refs/heads/main.zip) to download a copy of the stable branch
+    -   Extract it in a place with easy access to a terminal
+
+When Ruby 3.0, GraphicsMagic and Node.js are installed, and you have a copy of the source code, open the terminal and navigate to the folder where the code is. If you need help navigating using the terminal, please check the following articles:
+
+-   For Windows users, check [this](https://www.technoloxy.com/tutorials/cmd-navigate-view-run/) article.
+-   For UNIX/UNIX-like users such as Linux and macOS users, check [this](https://swcarpentry.github.io/shell-novice/02-filedir/index.html) article.
+
+> Note: **all** the following commands should be executed in the project's root directory.
+
+Install the dependencies by running `bundle install`. There may be need for providing the administrator password. For more information about Ruby's `bundle` tool, please check [here](https://bundler.io/man/bundle-install.1.html).
+
+Prepare the working environment by running the following command: `bundle exec bin/setup`. That command will automatically set up the development environment and finish the installation of the Node.js dependencies.
+
+### Running
+
+> Note: to test all features, run the development **dabatase seeds**. This will populate the local database with mock objects. This way, the website will behave as it has content. Execute `bundle exec rails db:seed` to generate the mock objects in the database.
+
+After following the instructions for getting started, execute `bundle exec rails server` for running this project. This will start the Rails server. Visit the local demo at <http://localhost:3000> (by default).
+
+#### Running the tests
+
+Running the tests is similar to running the server. For this, `bundle` is **required**. Run the test suite by issuing the following command: `bundle exec rspec`.
+
+## Authors
+
+👤 **Oever González**
+
+-   GitHub: [@NoTengoBattery](https://github.com/NoTengoBattery/)
+-   Twitter: [@NoTengoBattery](https://twitter.com/NoTengoBattery/)
+-   LinkedIn: [Oever González](https://linkedin.com/in/NoTengoBattery/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/NoTengoBattery/rails-lifestyles/issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+-   [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+-   Stephenson Blake, Miller & Richard and Bauerschen Giesserei for their astonishing [Work Sans](https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about) font family
+-   [Leyland Kirby](https://leylandkirby.bandcamp.com/) (a.k.a [The Caretaker](https://thecaretaker.bandcamp.com/)) for his amazing royality-free ambient music
+-   [Gustavo Carvalho](https://github.com/gscarv13/) for his Portuguese translations and his support
+
+## 📝 License
+
+This project is [MIT-modified](./LICENSE) licensed.

@@ -1,19 +1,49 @@
 {
-  "name": "website-template",
+  "name": "NoTengoStyle",
+  "version": "0.01",
   "private": true,
   "dependencies": {
     "@csstools/normalize.css": "^11.0",
+    "@fontsource/jetbrains-mono": "^4.2",
+    "@fontsource/source-serif-pro": "^4.2",
+    "@fontsource/work-sans": "^4.2",
+    "@fullhuman/postcss-purgecss": "^4.0",
+    "@iconify/iconify": "^1.0",
     "@rails/actioncable": "^6.1",
+    "@rails/actiontext": "^6.1",
     "@rails/activestorage": "^6.1",
     "@rails/ujs": "^6.1",
-    "@rails/webpacker": "^5.2",
-    "sass": "^1.32",
-    "turbolinks": "^5.2"
+    "@rails/webpacker": "^6.0.0-beta.6",
+    "bootstrap": "^4.6",
+    "css-loader": "^5.2",
+    "jquery": "^3.6",
+    "mini-css-extract-plugin": "^1.4",
+    "popper.js": "^1.16",
+    "postcss": "^8.2",
+    "postcss-flexbugs-fixes": "^5.0",
+    "postcss-import": "^14.0",
+    "postcss-loader": "^5.2",
+    "postcss-preset-env": "^6.7",
+    "sass-loader": "^11.0",
+    "style-loader": "^2.0",
+    "trix": "^1.3",
+    "turbolinks": "^5.2",
+    "webpack": "^5.28",
+    "webpack-cli": "^4.6"
   },
-  "version": "v0.25",
   "devDependencies": {
+    "@webpack-cli/serve": "^1.3",
+    "sass": "^1.32",
     "stylelint": "^13.12",
     "stylelint-config-sass-guidelines": "^8.0",
     "webpack-dev-server": "^3.11"
-  }
+  },
+  "babel": {
+    "presets": [
+      "./node_modules/@rails/webpacker/package/babel/preset.js"
+    ]
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

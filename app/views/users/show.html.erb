@@ -1,0 +1,34 @@
+<div class="container row p-0 m-auto">
+  <div class="col-12">
+    <h1 class="mb-0">
+      <span class="iconify" data-icon="ri:user-fill" data-inline="false"></span>
+      <%= @user.Name %>
+    </h1>
+    <p>
+      <span class="iconify" data-icon="ri:edit-2-fill" data-inline="false"></span>
+      <%= link_to t("user.edit_profile"), edit_user_path(@user) %>
+    </p>
+  </div>
+  <div class="col-12">
+    <p>
+      <span class="iconify" data-icon="ri:thumb-up-fill" data-inline="false"></span>
+      <%= t("user.total_voted") %>:
+      <span><%= @votes.size %></span>
+      <br>
+      <span class="iconify" data-icon="ri:file-text-fill" data-inline="false"></span>
+      <%= t("user.total_written") %>:
+      <span><%= @articles.size %></span>
+    </p>
+  </div>
+  <div class="col-12">
+    <h2>
+      <span class="iconify" data-icon="ri:file-text-fill" data-inline="false"></span>
+      <%= t("user.my_voted_articles") %>
+    </h2>
+  </div>
+  <div class="col-12 p-0 mx-auto">
+    <main>
+      <%= render_user_articles %>
+    </main>
+  </div>
+</div>

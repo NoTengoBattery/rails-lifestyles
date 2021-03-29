@@ -1,8 +1,8 @@
 class LocalesController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:site_locale]
+  skip_before_action :sign_in!
 
   def site_locale
-    configure_locale(new: params[:locale])
+    configure_locale(new: locale_params[:locale])
     redirect_back fallback_location: root_path
   end
 
@@ -13,7 +13,7 @@ class LocalesController < ApplicationController
   end
 
   private
-    def user_params
-      params.require(:locale).permit(:locale)
+    def locale_params
+      params.permit(:locale)
     end
 end
