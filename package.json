@@ -1,6 +1,6 @@
 {
   "name": "NoTengoStyle",
-  "version": "0.01",
+  "version": "1.00",
   "private": true,
   "dependencies": {
     "@csstools/normalize.css": "^11.0",
