@@ -95,7 +95,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 -   [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
--   Stephenson Blake, Miller & Richard and Bauerschen Giesserei for their astonishing [Work Sans](https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about) font family
+-   Wei Huang for his/her astonishing [Work Sans](https://fonts.google.com/specimen/Work+Sans?preview.text_type=custom#about) font family
 -   [Leyland Kirby](https://leylandkirby.bandcamp.com/) (a.k.a [The Caretaker](https://thecaretaker.bandcamp.com/)) for his amazing royality-free ambient music
 -   [Gustavo Carvalho](https://github.com/gscarv13/) for his Portuguese translations and his support
 
