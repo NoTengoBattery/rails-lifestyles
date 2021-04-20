@@ -1,24 +1,27 @@
-project_name = "lifestyle-demo"
-deploy_to = "/www/sockets/rails"
+project_name = "lifestyle_demo"
+deploy_to = "/storage/home/rails/sites"
+sockets = "/storage/home/webserver/sockets"
+pids = "/storage/home/webserver/pid"
+poject_path = "#{deploy_to}/#{project_name}"
 
 # The environment this Puma is going to run on
 environment ENV.fetch("RAILS_ENV") { "production" }
-directory "#{deploy_to}/#{project_name}/current"
+directory "#{poject_path}/current"
 
-# Execute in daemon mode (deprecated, using shell nohup)
+# Execute in daemon mode (deprecated, using systemd unit)
 # daemonize true
 
 # Bind to this UNIX socket for server, control
-bind "unix://#{deploy_to}/#{project_name}/shared/tmp/sockets/puma.sock"
-activate_control_app "unix://#{deploy_to}/#{project_name}/shared/tmp/sockets/pumactl.sock"
+bind "unix://#{sockets}/#{project_name}.sock"
+activate_control_app "unix://#{sockets}/#{project_name}_ctl.sock"
 
 # Use this state path, pidfile
-state_path "#{deploy_to}/#{project_name}/shared/tmp/sockets/puma.state"
-pidfile "#{deploy_to}/#{project_name}/shared/tmp/pids/puma.pid"
+state_path "#{sockets}/#{project_name}.state"
+pidfile "#{pids}/#{project_name}.pid"
 
 # Redirect output to this file for out and err
-stdout_redirect("#{deploy_to}/#{project_name}/shared/log/puma.log",
-                "#{deploy_to}/#{project_name}/shared/log/puma.err.log")
+stdout_redirect("#{poject_path}/shared/log/puma.log",
+                "#{poject_path}/shared/log/puma.err.log")
 
 # Other configuration
 max_threads_count = ENV.fetch("RAILS_MAX_THREADS", 5)
