@@ -6,7 +6,7 @@ ruby "~> 3.0.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "rails", "~> 6.1", ">= 6.1.3"
 # Use Puma as the app server
-gem "puma", "~> 5.2", ">= 5.2.2"
+gem "puma", "~> 5.3"
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem "webpacker", "6.0.0.beta.6", ">= 6.0.0.beta.6"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
