@@ -8,6 +8,12 @@
 
 A demo website for a blog-like "Lifestyle" page with user registration, authorization, authentication, and internationalization. The website uses Ruby on Rails with PostgreSQL as the back-end stack, with `webpack`, semantic HTML, and SASS for the front-end.
 
+## Important
+
+This project and most Ruby projects here are demos and showcases. They are designed to prove particular aspects, not only about Ruby code itself but also about other skills. Most of my real-world Ruby code is privative/closed source.
+
+For my recently "released to the public" template that I've been using to speed up my freelancing projects in the past, check out the `rails6-webpacker` repository. Besides from that template, this repositories should not be considered final or viable products.
+
 ## Built With
 
 -   [Ruby on Rails](https://rubyonrails.org/)

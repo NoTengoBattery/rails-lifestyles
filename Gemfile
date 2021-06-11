@@ -19,6 +19,7 @@ gem "jbuilder", "~> 2.11", ">= 2.11.2"
 # gem 'bcrypt', '~> 3.1', '>= 3.1.16'
 
 # Extra gems required for this project
+gem "aws-sdk-s3", require: false
 gem "image_processing", "~> 1.12", ">= 1.12.1"
 gem "mina", "~> 1.2", ">= 1.2.3"
 gem "mina-ng-puma", github: "NoTengoBattery/mina-ng-puma"

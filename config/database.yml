@@ -83,5 +83,3 @@ test:
 production:
   <<: *default
   database: lifestyle_demo
-  username: rails
-  password: <%= ENV['RAILS_SQLROLE_PASSWD'] %>
