@@ -33,7 +33,7 @@ For my recently "released to the public" template that I've been using to speed 
 
 ## Live Demo
 
-Visit this demo on my website [notengobattery.com](https://lifestyle.demo.notengobattery.com/)
+Visit this demo on my [Heroku](https://serene-cliffs-85459.herokuapp.com/)
 
 Check the video presentation on [YouTube](https://youtu.be/GATarBv2JLc/)
 
