@@ -20,7 +20,7 @@ gem "jbuilder", "~> 2.11", ">= 2.11.2"
 
 # Extra gems required for this project
 gem "aws-sdk-s3", require: false
-gem "image_processing", "~> 1.12", ">= 1.12.1"
+gem "image_processing", "~> 1.12"
 gem "mina", "~> 1.2", ">= 1.2.3"
 gem "mina-ng-puma", github: "NoTengoBattery/mina-ng-puma"
 gem "http-accept", "~> 2.1", ">= 2.1.1"
